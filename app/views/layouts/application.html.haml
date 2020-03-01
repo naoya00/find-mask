@@ -9,5 +9,14 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %header
+      = link_to "#", class: "findmask" do
+        Find  Mask
+      .header__lists
+        .header__lists--left
+          企業の方はコチラ：
+        = link_to "#", class: "signup--btn" do
+          新規登録
+        = link_to "#", class: "login--btn" do    
+          ログイン
     = yield
     %footer
