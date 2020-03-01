@@ -1,3 +1,58 @@
 * {
   box-sizing: border-box;
 }
+body{
+  height: 100vh;
+}
+header{
+  height: 75px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+
+}
+.topcontens{
+  height: 950px;
+  background-image: image-url("hand.jpg");
+  background-size: 100% 100%;
+  margin-top: 75px;
+  &__logo{
+    color: white;
+    font-size: 40px;
+    border: white solid 1px;
+    padding: 20px 80px;
+    opacity: 0;
+    animation: logo 5s, movecontent 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    @include moveanimation();
+   }
+  &__right{
+    position: absolute;
+    left: 70%;
+    top: 35%;
+    h1{
+      color: $white;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    h4{
+      color: $white;
+      font-size: 15px;
+      font-weight: 200px;
+      margin-top: 20px;
+    }
+    &--btn{
+      border: solid 1px white;
+      color: white;
+      padding: 15px 80px;
+      text-decoration: none;
+      margin-top: 50px;
+      display: block;
+    }
+    }
+}

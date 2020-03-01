@@ -1,0 +1,31 @@
+@mixin moveanimation {
+  @keyframes logo {
+    0% {
+      opacity: 0;
+      }
+      25% {
+      opacity: 10%;
+      }
+      50% {
+       opacity: 20%;
+      }
+      75% {
+      opacity: 60%;
+      }
+      100% {
+      opacity: 100%;
+      }
+  }
+  
+  
+  @keyframes movecontent {
+    0% {
+      top: 0;
+      left: 38%;
+    }
+    100% {
+      top: 320px;
+      left: 38%;
+    }
+  }
+}
