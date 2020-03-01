@@ -6,3 +6,11 @@
   display: flex;
   justify-content: space-between;
 }
+
+@mixin boxcss {
+  height: 130px;
+  width: 400px;
+  position: absolute;
+  top: 230px;
+  left: 130px;
+}

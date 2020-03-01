@@ -81,3 +81,45 @@ header{
     }
     }
 }
+.servise{
+  height: 650px;
+  background-color: $white;
+  padding: 90px 300px;
+  &__en{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: $blue;
+  }
+  &__ja{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  &__images{
+    @include flex-between();
+    &--left{
+      height: 300px;
+      width: 450px;
+      background-image: image-url("search.jpg");
+      background-size: 100% 100%;
+      position: relative;
+      &-box{
+      @include boxcss();
+      background-color: red;
+      }
+    }
+    &--right{
+      height: 300px;
+      width: 450px;
+      background-image: image-url("post2.jpg");
+      background-size: 100% 100%;
+      position: relative;
+      &-box{
+        @include boxcss();
+        background-color: red;
+      }
+    }
+  }
+}
