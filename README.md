@@ -45,7 +45,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |content|text|null: false|
-|image|text|null: false|
 |shop_id|integer|null: false, foreign_key: true|
 
 ### Association
