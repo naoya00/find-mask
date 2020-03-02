@@ -107,7 +107,14 @@ header{
       position: relative;
       &-box{
       @include boxcss();
-      background-color: red;
+      color: $black;
+      p{
+       @include box-design();
+      }
+      div{
+        color: $black;
+        margin-top: 10px;
+      }
       }
     }
     &--right{
@@ -118,7 +125,14 @@ header{
       position: relative;
       &-box{
         @include boxcss();
-        background-color: red;
+        color: $black;
+        p{
+          @include box-design();
+         }
+         div{
+           color: $black;
+           margin-top: 10px;
+         }
       }
     }
   }
