@@ -35,31 +35,17 @@
     新着情報
   .posts__box
     = link_to "#", class: "#" do
-      .newpost
-        .newpost__image
-        .newpost__textbox
-          .newpost__textbox--date
-            2020/0304 12:43
-          .newpost__textbox--shop
-            サンドラック 渋谷店
-          .newpost__textbox--time
-            渋谷駅から、徒歩５分
-          ————————————————————————————————————————————
-          .newpost__textbox--content
-            本日、マスク大人用１００箱入荷しました！
-            当店ではお一人様一箱までとさせていただきます。
-    = link_to "#", class: "#" do
-      .newpost
-        .newpost__image
-        .newpost__textbox
-          .newpost__textbox--date
-            2020/0304 12:43
-          .newpost__textbox--shop
-            サンドラック 渋谷店
-          .newpost__textbox--time
-            渋谷駅から、徒歩５分
-          ————————————————————————————————————————————
-          .newpost__textbox--content
-            本日、マスク大人用１００箱入荷しました！
-            当店ではお一人様一箱までとさせていただきます。
+      - @posts.each do |post|
+        .newpost
+          .newpost__image
+          .newpost__textbox
+            .newpost__textbox--date
+              2020/0304 12:43
+            .newpost__textbox--shop
+              サンドラック 渋谷店
+            .newpost__textbox--time
+              渋谷駅から、徒歩５分
+            ————————————————————————————————————————————
+            .newpost__textbox--content
+              = post.content
     
