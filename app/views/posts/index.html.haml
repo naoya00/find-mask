@@ -1,0 +1,51 @@
+.topcontens
+  .topcontens__logo
+    Find Mask
+  .topcontens__right
+    %h1
+      マスクを見つける
+    %h4
+      コロナウィルスの影響で直面した
+      %br
+      マスク入手困難を解決する
+    = link_to "#", class: "topcontens__right--btn" do
+      サービス案内
+.servise
+  .servise__en
+    SERVICE
+  .servise__ja
+    サービスのご案内
+  .servise__images
+    = link_to "#", class: "#" do
+      .servise__images--left
+        .servise__images--left-box
+          %p Search
+          —————————————————————
+          %div  お近くの駅からマスクの在庫がある、ドラッグストアを検索します。
+    = link_to "#", class: "#" do
+      .servise__images--right
+        .servise__images--right-box
+          %p New Post
+          —————————————————————
+          %div 各ドラックストアのマスクの最新入荷情報などを見ることができます。
+.posts
+  .posts__en
+    NEW POSTS
+  .posts__ja
+    新着情報
+  .posts__box
+    = link_to "#", class: "#" do
+      - @posts.each do |post|
+        .newpost
+          .newpost__image
+          .newpost__textbox
+            .newpost__textbox--date
+              2020/0304 12:43
+            .newpost__textbox--shop
+              サンドラック 渋谷店
+            .newpost__textbox--time
+              渋谷駅から、徒歩５分
+            ————————————————————————————————————————————
+            .newpost__textbox--content
+              = post.content
+    
