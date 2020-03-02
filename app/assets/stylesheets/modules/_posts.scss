@@ -86,16 +86,10 @@ header{
   background-color: $white;
   padding: 90px 300px;
   &__en{
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    color: $blue;
+   @include heading-english();
   }
   &__ja{
-    font-size: 20px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
+   @include heading-japan();
   }
   &__images{
     @include flex-between();
@@ -140,6 +134,18 @@ header{
 
 .posts{
   height: 1200px;
-  background-color: red;
   padding-top:90px;
+  &__en{
+    @include heading-english();
+  }
+  &__ja{
+    @include heading-japan();
+  }
+  &__box{
+    width: 80%;
+    background-color: rebeccapurple;
+    height: 80%;
+    margin: 0 auto;
+    overflow: scroll;
+  }
 }

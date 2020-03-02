@@ -24,3 +24,16 @@
   font-weight: bold;
   color: $white;
 }
+
+@mixin heading-japan {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+@mixin heading-english {
+  font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: $blue;
+}
