@@ -12,8 +12,7 @@ class DeviseCreateShops < ActiveRecord::Migration[5.2]
       t.datetime :reset_password_sent_at
 
       ## Rememberable
-      t.datetime :remember_created_at
-
+      
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
       # t.datetime :current_sign_in_at
@@ -31,13 +30,10 @@ class DeviseCreateShops < ActiveRecord::Migration[5.2]
       # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
-
-
-      t.timestamps null: false
     end
 
     add_index :shops, :email,                unique: true
-    add_index :shops, :reset_password_token, unique: true
+    add_index :shops, :reset_password_token, unique: true           
     # add_index :shops, :confirmation_token,   unique: true
     # add_index :shops, :unlock_token,         unique: true
   end
