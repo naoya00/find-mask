@@ -1,0 +1,29 @@
+.contents.row
+  .container
+    %h2 お店情報の変更
+    = form_with model: @shop, id: 'new_shop', class: 'new_shop', local: true do |f|
+      .field
+        = f.label :name
+        %br/
+        = f.text_field :name
+      .field
+        = f.label :image
+        %br/
+        = f.email_field :image
+      .field
+        = f.label :address
+        %br/
+        = f.email_field :address
+      .field
+        = f.label :station
+        %br/
+        = f.email_field :station
+      .field
+        = f.label :station_walk
+        %br/
+        = f.email_field :station_walk
+      .field
+        = f.label :shop_time
+        %br/
+        = f.email_field :shop_time
+        = f.submit "Update"

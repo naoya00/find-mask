@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_103511) do
+ActiveRecord::Schema.define(version: 2020_03_02_105538) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content", null: false
@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(version: 2020_03_02_103511) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "remember_created_at"
+    t.string "name"
+    t.text "image"
+    t.string "address"
+    t.string "station"
+    t.integer "station_walk"
+    t.string "shop_holiday"
+    t.string "shop_time"
     t.index ["email"], name: "index_shops_on_email", unique: true
     t.index ["reset_password_token"], name: "index_shops_on_reset_password_token", unique: true
   end
