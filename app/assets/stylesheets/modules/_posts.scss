@@ -147,5 +147,33 @@ header{
     height: 80%;
     margin: 0 auto;
     overflow: scroll;
+    padding: 30px 50px;
+    .newpost{
+      height: 300px;
+      background-color: royalblue;
+      @include flex-between();
+      padding: 20px 30px;
+      margin-bottom: 30px;
+      &__image{
+        height: 100%;
+        width: 30%;
+        background-color: sandybrown;
+      }
+      &__textbox{
+        background-color: sandybrown;
+        width: 66%;
+        padding:20px 30px;
+        &--date{
+          float: right;
+          display: inline-block;
+          color: $gray;
+        }
+        &--shop{
+          color: $black;
+          font-size: 25px;
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
