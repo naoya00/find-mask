@@ -1,7 +1,7 @@
 .contents.row
   .container
     %h2 Sign up
-    = form_with model: @shop, url: shop_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
+    = form_with model: @shop, url: shop_registration_path, id: 'new_shop', class: 'new_shop', local: true do |f|
       = devise_error_messages!
       .field
         = f.label :email
