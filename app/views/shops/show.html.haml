@@ -5,8 +5,8 @@
     詳細情報
   .shop__box
     .shop__box--image
-      - if @shop.image
-        = image_tag @shop.image
+      - if @shop.image.url
+        = image_tag @shop.image.url
     .shop__box--contens
       .shop__name.shop__content
         = @shop.name

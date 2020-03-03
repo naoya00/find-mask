@@ -12,10 +12,11 @@
     height: 800px;
     @include flex-between;
     &--image{
-      height: 350px;
-      width: 450px;
+      height: 220px;
+      width: 250px;
       background-image: url("no-image.jpg");
       background-size: 100% 100%;
+      margin: 50px 0 0 60px;
     }
     &--contens{
       width: 700px;
