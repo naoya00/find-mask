@@ -4,7 +4,7 @@ class ToShops < ActiveRecord::Migration[5.2]
     add_column :shops,:image, :text
     add_column :shops,:address, :string
     add_column :shops,:station, :string
-    add_column :shops,:station_walk, :integer
+    add_column :shops,:station_walk, :string
     add_column :shops,:shop_holiday, :string
     add_column :shops,:shop_time, :string
   end

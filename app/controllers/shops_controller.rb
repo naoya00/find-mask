@@ -1,5 +1,9 @@
 class ShopsController < ApplicationController
 
+  def show
+    @shop = Shop.find(params[:id])
+  end
+
   def edit
     @shop = Shop.find(params[:id])
   end
@@ -7,7 +11,7 @@ class ShopsController < ApplicationController
   def update
     shop = Shop.find(params[:id])
     shop.update(shop_params)
-    redirect_to root_path, notice: 'お店情報を更新しました'
+    redirect_to shop_path(shop.id), notice: 'お店情報を更新しました'
   end
 
   private

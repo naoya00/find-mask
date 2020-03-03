@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_03_02_105538) do
     t.text "image"
     t.string "address"
     t.string "station"
-    t.integer "station_walk"
+    t.string "station_walk"
     t.string "shop_holiday"
     t.string "shop_time"
     t.index ["email"], name: "index_shops_on_email", unique: true

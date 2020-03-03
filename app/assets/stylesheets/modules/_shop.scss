@@ -1,0 +1,54 @@
+.shop{
+  height: 1030px;
+  &__en{
+    padding-top: 50px;
+    @include heading-english;
+  }
+  &__ja{
+    @include heading-japan;
+  }
+  &__box{
+    @include mainbox;
+    height: 800px;
+    @include flex-between;
+    &--image{
+      height: 350px;
+      width: 450px;
+      background-image: url("no-image.jpg");
+      background-size: 100% 100%;
+    }
+    &--contens{
+      width: 700px;
+      height: 350px;
+      padding:20px 30px;
+      color: $black;
+      .shop__content{
+        height: 60px;
+        width: 100%;
+        margin-top:10px;
+        line-height: 60px;
+      }
+      .shop__name{
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.content__btns{
+  height: 120px;
+  // background-color: red;
+  @include flex-between;
+  padding: 10px 165px;
+  .content__btn{
+    height: 100px;
+    width: 400px;
+    background-color: $blue;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+    text-align: center;
+    line-height: 100px;
+    font-size: 25px;
+    font-weight: bold;
+    color: $white;
+  }
+}
