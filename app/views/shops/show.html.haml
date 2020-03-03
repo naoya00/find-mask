@@ -1,0 +1,34 @@
+.shop
+  .shop__en
+    Information
+  .shop__ja
+    詳細情報
+  .shop__box
+    .shop__box--image
+      - if @shop.image.url
+        = image_tag @shop.image.url
+    .shop__box--contens
+      .shop__name.shop__content
+        = @shop.name
+      %hr
+      .shop__station.shop__content
+        = @shop.station + "駅から徒歩" + @shop.station_walk + "分"
+      %hr
+      .shop__address.shop__content
+        = @shop.address
+      %hr
+      .shop__time.shop__content
+        = "営業時間：" + @shop.shop_time + "　　　定休日：" + @shop.shop_holiday
+-# - if 
+.content__btns
+  = link_to edit_shop_path(@shop.id), class: "#" do
+    .content__btn
+      お店の情報を登録・更新
+  = link_to "#", class: "#" do
+    .content__btn
+      入荷情報を投稿する
+  = link_to "#", class: "#" do
+    .content__btn
+      マスク
+
+
