@@ -184,3 +184,27 @@ header{
     }
   }
 }
+.postform{
+  height: 450px;
+  &__ja{
+  @include heading-japan;
+  }
+  &__en{
+  @include heading-english;
+  padding-top: 20px;
+  }
+  &__box{
+    @include mainbox;
+    &--area{
+      width: 100%;
+      height: 200px;
+      margin-top: 10px;
+    }
+    &--submit{
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
+
+

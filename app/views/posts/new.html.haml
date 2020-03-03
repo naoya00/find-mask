@@ -1,0 +1,12 @@
+.postform
+  .postform__en
+    New Post
+  .postform__ja
+    新規投稿
+  .postform__box
+    = form_with model: @post, id: '#', class: '#', local: true do |f|
+      .field
+        = f.label :"投稿内容"
+        %br/
+        = f.text_area :content,class: "postform__box--area", placeholder:"例：マスク１００箱入荷しました。お一人様一箱までとさせていただきます"
+      = f.submit "New post", class: "postform__box--submit"
