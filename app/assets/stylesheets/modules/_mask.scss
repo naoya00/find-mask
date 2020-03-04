@@ -1,0 +1,29 @@
+.maskform{
+  height: 450px;
+  &__ja{
+  @include heading-japan;
+  }
+  &__en{
+  @include heading-english;
+  padding-top: 20px;
+  }
+  &__box{
+    @include mainbox;
+    input{
+      height: 40px;
+      width: 100%;
+      margin: 5px 0 0 0;
+      padding-left: 10px;
+    }
+    .field{
+      margin-bottom: 15px;
+    }
+    &--submit{
+      background-color: $blue;
+      color: $white;
+      margin-bottom: 10px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+      border-radius: 20px;
+    }
+  }
+}

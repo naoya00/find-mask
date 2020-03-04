@@ -1,5 +1,5 @@
 .shop{
-  height: 1030px;
+  height: 1100px;
   &__en{
     padding-top: 50px;
     @include heading-english;
@@ -9,8 +9,9 @@
   }
   &__box{
     @include mainbox;
-    height: 800px;
+    height: 850px;
     @include flex-between;
+    position: relative;
     &--image{
       height: 220px;
       width: 250px;
@@ -33,6 +34,14 @@
         font-size: 30px;
         font-weight: bold;
       }
+    }
+    &--masks{
+      height: 300px;
+      background-color: blue;
+      width: calc(100% - 100px);
+      position: absolute;
+      bottom: 30px;
+      
     }
   }
 }

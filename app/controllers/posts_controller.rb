@@ -5,12 +5,12 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+   @post = Post.new
   end
 
   def create
     Post.create(post_params)
-    redirect_to root_path
+    redirect_to shop_path(current_shop.id)
   end
 
   private
@@ -20,3 +20,4 @@ class PostsController < ApplicationController
   end
 
 end
+ 
