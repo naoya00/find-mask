@@ -1,0 +1,20 @@
+.maskform
+  .maskform__en
+    Add mask
+  .maskform__ja
+    マスク情報追加
+  .maskform__box
+    = form_with model:@mask, local: true do |f|
+      .field
+        = f.label :"製品名"
+        %br/
+        = f.text_field :name,class: "maskform__box--name", placeholder:"例：超快適マスク プリーツタイプ ふつう50枚"
+      .field
+        = f.label :"画像"
+        %br/
+        = f.file_field  :image,class: "maskform__box--image"
+      .field
+        = f.label :"在庫数(箱)"
+        %br/
+        = f.number_field  :stock,max:1000,min:1,class: "maskform__box--stock",placeholder: "在庫数を入力してください"
+      = f.submit "Add mask", class: "maskform__box--submit"

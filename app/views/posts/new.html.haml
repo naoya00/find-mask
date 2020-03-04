@@ -4,7 +4,7 @@
   .postform__ja
     新規投稿
   .postform__box
-    = form_with model: @post, id: '#', class: '#', local: true do |f|
+    = form_with model:@post, local: true do |f|
       .field
         = f.label :"投稿内容"
         %br/
