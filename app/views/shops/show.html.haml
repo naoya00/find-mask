@@ -25,7 +25,20 @@
         = @shop.shop_time
         　　　定休日：
         = @shop.shop_holiday
-    .shop__box--masks
+    - @masks.each do |mask|
+      .shop__box--masks
+        .mask-box
+          .mask-box--image
+            = image_tag mask.image
+            .mask-box--destroy
+              = link_to "#", class: "#" do
+                %i.fas.fa-trash-alt
+          .mask-box--under
+            .mask-box--name
+              = mask.name
+            .mask-box--stock
+              在庫（箱）：
+              = mask.stock
 - if current_shop.id == @shop.id
   .content__btns
     = link_to edit_shop_path(@shop.id)do

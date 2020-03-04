@@ -37,11 +37,43 @@
     }
     &--masks{
       height: 300px;
-      background-color: blue;
       width: calc(100% - 100px);
       position: absolute;
       bottom: 30px;
-      
+      @include flex;
+      overflow: scroll;
+      .mask-box{
+        height: 100%;
+        width: 33%;
+        margin-right: 10px;
+        &--image{
+          height:240px ;
+          position: relative;
+        }
+        &--under{
+          position: relative;
+          height: calc(100% - 240px);
+        }
+        &--name{
+          position: absolute;
+          left: 10px;
+        }
+        &--stock{
+          position: absolute;
+          bottom: 0;
+          left:10px ;
+          font-size: 15px;
+        }
+        &--destroy{
+          position: absolute;
+          left: 370px;
+          top: 10px;
+          font-size: 30px;
+          i{
+            color: $black;
+          }
+        }
+      }
     }
   }
 }
