@@ -5,6 +5,7 @@ class Shop < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
        has_many :posts
+       has_many :masks
 
    mount_uploader :image, ImageUploader
 end

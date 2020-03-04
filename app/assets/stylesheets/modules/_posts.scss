@@ -101,6 +101,7 @@ header{
       background-image: image-url("search.jpg");
       background-size: 100% 100%;
       position: relative;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
       &-box{
       @include boxabsolute;
       color: $black;
@@ -119,6 +120,7 @@ header{
       background-image: image-url("post2.jpg");
       background-size: 100% 100%;
       position: relative;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
       &-box{
         @include boxabsolute;
         color: $black;
@@ -157,12 +159,14 @@ header{
         width: 30%;
         background-image: url("no-image.jpg");
         background-size: 100% 100%;
+        display: contents;
       }
       &__textbox{
         width: 66%;
         padding:20px 30px;
         color: $black;
         overflow: scroll;
+        margin: 0 auto;
         &--date{
           float: right;
           display: inline-block;

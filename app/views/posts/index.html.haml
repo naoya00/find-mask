@@ -38,6 +38,8 @@
       - @posts.each do |post|
         .newpost
           .newpost__image
+            -if post.shop.image.url
+              = image_tag post.shop.image.url
           .newpost__textbox
             .newpost__textbox--date
               = post.created_at
