@@ -30,16 +30,17 @@
         .mask-box
           .mask-box--image
             = image_tag mask.image.url
-            .mask-box--destroy
-              = link_to "#", class: "#" do
-                %i.fas.fa-trash-alt
+            - if shop_signed_in? && current_shop.id == mask.shop.id
+              .mask-box--destroy
+                = link_to mask_path(mask.id), method: :delete do
+                  %i.fas.fa-trash-alt
           .mask-box--under
             .mask-box--name
               = mask.name
             .mask-box--stock
               在庫（箱）：
               = mask.stock
-- if current_shop.id == @shop.id
+- if shop_signed_in? && current_shop.id == @shop.id
   .content__btns
     = link_to edit_shop_path(@shop.id)do
       .content__btn

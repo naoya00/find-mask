@@ -9,6 +9,12 @@ class MasksController < ApplicationController
     redirect_to shop_path(current_shop.id)
   end
 
+  def destroy
+    mask = Mask.find(params[:id])
+    mask.destroy
+    redirect_to shop_path(current_shop.id)
+  end
+
   private
   def mask_params
     params.require(:mask).permit(:name,:image,:stock).merge(shop_id: current_shop.id)
