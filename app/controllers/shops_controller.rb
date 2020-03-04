@@ -2,7 +2,7 @@ class ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
-    @masks = @shop.masks.includes(:shop)
+    @masks = @shop.masks.includes(:shop).order(updated_at: :desc)
   end
 
   def edit

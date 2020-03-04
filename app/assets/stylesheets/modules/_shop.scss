@@ -45,10 +45,11 @@
       .mask-box{
         height: 100%;
         width: 33%;
-        margin-right: 10px;
+        margin-right: 20px;
         &--image{
           height:240px ;
           position: relative;
+          @include flex;
         }
         &--under{
           position: relative;
@@ -66,7 +67,7 @@
         }
         &--destroy{
           position: absolute;
-          left: 370px;
+          left: 360px;
           top: 10px;
           font-size: 30px;
           i{

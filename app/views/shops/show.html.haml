@@ -25,11 +25,11 @@
         = @shop.shop_time
         　　　定休日：
         = @shop.shop_holiday
-    - @masks.each do |mask|
-      .shop__box--masks
+    .shop__box--masks
+      - @masks.each do |mask|
         .mask-box
           .mask-box--image
-            = image_tag mask.image
+            = image_tag mask.image.url
             .mask-box--destroy
               = link_to "#", class: "#" do
                 %i.fas.fa-trash-alt
