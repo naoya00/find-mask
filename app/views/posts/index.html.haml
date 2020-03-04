@@ -34,8 +34,8 @@
   .posts__ja
     新着情報
   .posts__box
-    = link_to "#", class: "#" do
-      - @posts.each do |post|
+    - @posts.each do |post|
+      = link_to shop_path(post.shop.id), class: "#" do
         .newpost
           .newpost__image
             -if post.shop.image.url
