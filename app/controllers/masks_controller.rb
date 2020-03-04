@@ -1,7 +1,12 @@
 class MasksController < ApplicationController
 
+  def new
+    @mask = Mask.new
+  end
+   
   def create
     Mask.create(mask_params)
+    redirect_to 
   end
 
   private
@@ -10,3 +15,4 @@ class MasksController < ApplicationController
   end
 
 end
+ 
