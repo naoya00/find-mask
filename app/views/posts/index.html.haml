@@ -38,13 +38,18 @@
       - @posts.each do |post|
         .newpost
           .newpost__image
+            -if post.shop.image.url
+              = image_tag post.shop.image.url
           .newpost__textbox
             .newpost__textbox--date
-              2020/0304 12:43
+              = post.created_at
             .newpost__textbox--shop
-              サンドラック 渋谷店
+              = post.shop.name
             .newpost__textbox--time
-              渋谷駅から、徒歩５分
+              = post.shop.station
+              駅から徒歩
+              = post.shop.station_walk
+              分
             %hr
             .newpost__textbox--content
               = post.content
