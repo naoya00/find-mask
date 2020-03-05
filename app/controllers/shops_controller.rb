@@ -1,5 +1,9 @@
 class ShopsController < ApplicationController
 
+  def index
+    @shops = Shop.all
+  end
+
   def show
     @shop = Shop.find(params[:id])
     @masks = @shop.masks.includes(:shop).order(updated_at: :desc)

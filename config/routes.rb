@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:index,:create]
   resources :masks, only: [:create,:destroy]
 
-  resources :shops, only: [:show,:edit,:update]do
+  resources :shops, only: [:index,:show,:edit,:update]do
   resources :posts, only: :new
   resources :masks, only: :new
   end

@@ -1,0 +1,31 @@
+.search__row
+  .search__en
+    Search
+  .search__ja
+    在庫検索
+  .search__mainbox
+    - @shops.each do |shop|
+      - if shop.station && shop.name
+        = link_to shop_path(shop.id), class: "#" do
+          .search__box
+            .search__box--contens
+              .search__name
+                = shop.name
+              %hr
+              .search__station
+                = shop.station
+                駅から徒歩
+                = shop.station_walk
+                分
+            .search__box--masks
+              - shop.masks.each do |mask|
+                .search__box--mask
+                  .search__box--mask-image
+                    = image_tag mask.image.url
+                  .search__box--mask-under
+                    .search__box--mask-name
+                      = mask.name
+                    .search__box--mask-stock
+                      在庫（箱）：
+                      %spam.search__box--mask-num
+                        = mask.stock
