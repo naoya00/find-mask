@@ -12,7 +12,7 @@ class MasksController < ApplicationController
   def destroy
     mask = Mask.find(params[:id])
     mask.destroy
-    redirect_to shop_path(current_shop.id)
+    # redirect_to shop_path(current_shop.id)
   end
 
   private
