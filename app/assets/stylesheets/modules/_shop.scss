@@ -95,3 +95,66 @@
     color: $white;
   }
 }
+
+
+.search__row{
+  height: 100vh;
+  padding-top: 90px;
+.search__ja{
+  @include heading-japan;
+}
+.search__en{
+  @include heading-english;
+}
+.search__mainbox{
+  margin: 0 100px;
+}
+.search__box{
+  height: 600px;
+ margin: 30px 0;
+ box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+ padding: 30px 30px;
+ color: $black;
+ position: relative;
+ &--contens{
+   height: 100px;
+   text-align: center;
+   .search__name{
+     font-size: 30px;
+     font-weight: bold;
+   }
+   .search__station{
+     font-size: 20px;
+     padding-top: 10px;
+   }
+ }
+ &--masks{
+  @include flex;
+  overflow: scroll;
+  width: calc(100% - 60px);
+  height: 400px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  .search__box--mask{
+    height: 100%;
+    width: 33%;
+    margin-right: 20px;
+    text-align: center;
+    &-image{
+      height: 300px;
+      display: inline-flex;
+    }
+    &-name{
+      font-size: 20px;
+      font-weight: bold;
+      padding: 15px;
+    }
+    &-num{
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+ }
+}
+}
