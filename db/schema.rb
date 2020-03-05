@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_124531) do
+ActiveRecord::Schema.define(version: 2020_03_05_053242) do
 
   create_table "masks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2020_03_03_124531) do
     t.string "shop_time"
     t.index ["email"], name: "index_shops_on_email", unique: true
     t.index ["reset_password_token"], name: "index_shops_on_reset_password_token", unique: true
+    t.index ["station"], name: "index_shops_on_station"
   end
 
   add_foreign_key "masks", "shops"
