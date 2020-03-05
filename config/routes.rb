@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :shops, only: [:index,:show,:edit,:update]do
   resources :posts, only: :new
   resources :masks, only: :new
+  collection do
+    get 'search'
+  end
   end
   
   end

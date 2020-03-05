@@ -3,6 +3,9 @@
     Search
   .search__ja
     在庫検索
+  = form_with url: search_shops_path, local: true, method: :get, class: "search-form"  do |f|
+    = f.text_field :keyword, placeholder: "駅名を入力してください", class: "search-input"
+    = f.submit "検索", class: "search-btn"
   .search__mainbox
     - @shops.each do |shop|
       - if shop.station && shop.name
