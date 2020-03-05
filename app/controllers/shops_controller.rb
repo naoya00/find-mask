@@ -19,6 +19,10 @@ class ShopsController < ApplicationController
     redirect_to shop_path(shop.id), notice: 'お店情報を更新しました'
   end
 
+  def search
+    @shops = Shop.search(params[:keyword])
+  end
+
   private
   def shop_params
     params.require(:shop).permit(:name, :image, :station, :station_walk, :shop_time, :address,:shop_holiday)
