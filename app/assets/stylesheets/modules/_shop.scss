@@ -114,7 +114,6 @@
  margin: 30px 0;
  box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
  padding: 30px 30px;
- color: $black;
  position: relative;
  &--contens{
    height: 100px;
@@ -122,10 +121,15 @@
    .search__name{
      font-size: 30px;
      font-weight: bold;
+     color: $black;
    }
    .search__station{
      font-size: 20px;
      padding-top: 10px;
+     color: $black;
+   }
+   hr{
+     color: $black;
    }
  }
  &--masks{
