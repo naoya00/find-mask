@@ -10,7 +10,6 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
-    redirect_to shop_path(current_shop.id)
   end
 
   private

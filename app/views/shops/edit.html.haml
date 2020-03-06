@@ -1,15 +1,19 @@
 .contents.row
+  .postform__en
+    Edit Shop
+  .postform__ja
+    お店情報登録・更新
   .container
-    %h2 お店情報の変更
     = form_with model: @shop, id: 'new_shop', class: 'new_shop', local: true do |f|
       .field
         = f.label :"店名"
         %br/
         = f.text_field :name ,maxlength:20, placeholder:"例：スーパードラック 渋谷２０２０号店(20字以内）"
       .field
-        = f.label :"外観写真"
-        %br/
-        = f.file_field :image
+        = f.label :image, :"外観写真" do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image
+          %span.select__image--text 外観写真を選択してください
       .field
         = f.label :"住所"
         %br/
@@ -30,5 +34,5 @@
         = f.label :定休日
         %br/
         = f.text_field :shop_holiday,maxlength:10, placeholder:"例：水曜日"
-        = f.submit "Update"
+        = f.submit "Update",class: "devise__submit"
 
