@@ -36,21 +36,11 @@
   .posts__box
     - @posts.each do |post|
       = link_to shop_path(post.shop.id), class: "#" do
-        .newpost
-          .newpost__image
-            -if post.shop.image.url
-              = image_tag post.shop.image.url
-          .newpost__textbox
-            .newpost__textbox--date
-              = post.created_at
-            .newpost__textbox--shop
-              = post.shop.name
-            .newpost__textbox--time
-              = post.shop.station
-              駅から徒歩
-              = post.shop.station_walk
-              分
-            %hr
-            .newpost__textbox--content
-              = post.content
-    
+        .newpost__box
+          %span.newpost__box--date
+            = post.created_at
+          %span.newpost__box--name
+            = post.shop.name
+          %hr/
+          .newpost__box--content
+            = post.content

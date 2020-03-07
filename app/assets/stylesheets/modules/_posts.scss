@@ -137,7 +137,6 @@ header{
 }
 
 .posts{
-  height: 1200px;
   padding-top:90px;
   &__en{
     @include heading-english();
@@ -146,47 +145,29 @@ header{
     @include heading-japan();
   }
   &__box{
-    @include mainbox;
-    .newpost{
-      height: 300px;
-      background-color: $white;
-      @include flex-between;
-      padding: 20px 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 8px $black;
-      &__image{
-        height: 100%;
-        width: 30%;
-        background-image: url("no-image.jpg");
-        background-size: 100% 100%;
-        display: contents;
+    margin-top: 100px;
+    padding: 0 200px;
+    .newpost__box{
+      margin: 50px 0;
+      text-align: center;
+      width: 100%;
+      color: $black;
+      &--date{
+        color: $blue;
+        margin-right: 10px;
+        font-weight: bold;
       }
-      &__textbox{
-        width: 66%;
-        padding:20px 30px;
-        color: $black;
-        overflow: scroll;
-        margin: 0 auto;
-        &--date{
-          float: right;
-          display: inline-block;
-          color: $gray;
-        }
-        &--shop{
-          font-size: 25px;
-          font-weight: bold;
-          margin-bottom: 10px;
-        }
-        &--time{
-          margin-bottom: 10px;
-        }
-        &--content{
-          font-size: 20px;
-          margin-top: 10px;
-        }
+      &--name{
+        font-size: 25px;
+        font-weight: bold;
+        margin-right: 100px;
+      }
+      &--content{
+        margin-top: 20px;
       }
     }
   }
+  
 }
 .postform{
   height: 450px;
