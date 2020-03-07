@@ -1,6 +1,6 @@
 $(function() {
   $('.search__box--masks').slick({
-  slidesToShow:3,
+  slidesToShow:2,
   centerMode:true,
   autoplay:1800,
   arrows:false,
