@@ -1,9 +1,11 @@
 $(function() {
   $('.search__box--masks').slick({
-  slidesToShow:2,
+  slidesToShow:3,
   centerMode:true,
-  autoplay:1800,
+  centerPadding:150,
+  autoplay:1500,
   arrows:false,
+  focusOnSelect:true
   });
 
   $('.btn__newpost').click(function() {
