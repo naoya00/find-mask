@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
-    @comments = Comment.all.order(updated_at: :desc).limit(10)
+    @comments = Comment.all.order(updated_at: :desc).page(params[:page]).per(5)
     @comment = Comment.new
   end
 

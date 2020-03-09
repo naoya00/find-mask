@@ -37,4 +37,10 @@ $(function(){
       alert('error');
     })
   })
+  $('.comments--underbox').jscroll({
+    contentSelector: '.comments--underbox',
+    nextSelector: 'span.next:last a',
+    loadingHtml: '読み込み中'
+  });
+
 });

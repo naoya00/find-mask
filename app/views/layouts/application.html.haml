@@ -13,7 +13,7 @@
   %body
     = render 'layouts/notifications'
     %header
-      = link_to root_path , class: "findmask" do
+      = link_to root_path , data: {"turbolinks" => false}, class: "findmask" do
         Find  Mask
       .header__lists
         .header__lists--left
