@@ -15,7 +15,7 @@
           %br/
           = f.text_field :text,class: "textbox"
       = f.submit "New post", class: "comments__form--box-submit"
-  .posts__box
+  .posts__box.comments--underbox
     - @comments.each do |comment|
       .newpost__box.comments__box
         %span.newpost__box--date

@@ -6,6 +6,13 @@
   &__ja{
     @include heading-japan();
   }
+  &--underbox{
+    padding: 0;
+  }
+  &__box{
+    padding: 20px 200px;
+    margin: 0;
+  }
   &__form{
     margin: 0 200px;
     padding: 20px 50px;

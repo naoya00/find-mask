@@ -28,10 +28,13 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.posts__box').append(html);
+      $('.posts__box').prepend(html);
       $('.textbox').val('');
       $('.nicknamebox').val('');
-      $('.form__submit').prop('disabled', false);
+      $('.comments__form--box-submit').prop('disabled', false);
+    })
+    .fail(function(){
+      alert('error');
     })
   })
 });
