@@ -1,0 +1,44 @@
+.comments{
+  padding-top:90px;
+  &__en{
+    @include heading-english();
+  }
+  &__ja{
+    @include heading-japan();
+  }
+  &__form{
+    margin: 0 200px;
+    padding: 20px 50px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+    &--box{
+      @include flex-between;
+      width: 100%;
+      &-field{
+        margin-bottom: 40px;
+        label{
+          margin-bottom: 10px;
+        }
+      }
+      #comment_nickname{
+        margin-top: 10px;
+        padding-left: 10px;
+        height: 40px;
+      }
+      #comment_text{
+      width: 900px;
+      margin-top: 10px;
+      padding-left: 10px;
+      height: 40px;
+    }
+    &-submit{
+      background-color: $blue;
+      width: 100%;
+      height: 30px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+      margin-bottom: 15px;
+      color: $white;
+      border-radius: 20px;
+    }
+  }
+}
+}

@@ -1,0 +1,27 @@
+.comments
+  .comments__en
+    Bulletin board
+  .comments__ja
+    みんなの掲示板
+  .comments__form
+    = form_with model:@comment, local: true,id: "new_comment" do |f|
+      .comments__form--box
+        .comments__form--box-field
+          = f.label :"ニックネーム"
+          %br/
+          = f.text_field :nickname,class: "nicknamebox"
+        .comments__form--box-field
+          = f.label :"投稿内容"
+          %br/
+          = f.text_field :text,class: "textbox"
+      = f.submit "New post", class: "comments__form--box-submit"
+  .posts__box
+    - @comments.each do |comment|
+      .newpost__box.comments__box
+        %span.newpost__box--date
+          = comment.created_at
+        %span.newpost__box--name
+          = comment.nickname
+        %hr/
+        .newpost__box--content
+          = comment.text
