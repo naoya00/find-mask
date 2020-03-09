@@ -61,3 +61,9 @@ Things you may want to cover:
 ### Association
 - belongs_to :shop
 
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string||
+|text|string||
+

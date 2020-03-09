@@ -117,7 +117,7 @@ header{
     &--right{
       height: 300px;
       width: 450px;
-      background-image: image-url("post2.jpg");
+      background-image: image-url("shop.jpg");
       background-size: 100% 100%;
       position: relative;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
@@ -132,6 +132,30 @@ header{
            margin-top: 10px;
          }
       }
+    }
+  }
+}
+
+.secondservise{
+  margin: 50px 0;
+  &__images{
+    height: 300px;
+    width: 450px;
+    background-image: image-url("post2.jpg");
+    background-size: 100% 100%;
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+    margin: 0 auto;
+    &--box{
+      @include boxabsolute;
+      color: $black;
+      p{
+        @include box-design();
+       }
+       div{
+         color: $black;
+         margin-top: 10px;
+       }
     }
   }
 }
@@ -198,3 +222,6 @@ header{
 }
 
 
+.space{
+  margin: 0 10px;
+}

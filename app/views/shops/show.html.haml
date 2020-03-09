@@ -23,7 +23,8 @@
       .shop__time.shop__content
         営業時間：
         = @shop.shop_time
-        　　　定休日：
+        %span.space
+        定休日：
         = @shop.shop_holiday
     .shop__box--masks
       - @masks.each do |mask|

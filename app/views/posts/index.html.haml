@@ -16,7 +16,7 @@
   .servise__ja
     サービスのご案内
   .servise__images
-    = link_to shops_path, class: "#" do
+    = link_to shops_path, data: {"turbolinks" => false}, class: "#" do
       .servise__images--left
         .servise__images--left-box
           %p Search
@@ -25,9 +25,16 @@
     = link_to "#", class: "btn__newpost" do
       .servise__images--right
         .servise__images--right-box
-          %p New Post
+          %p Shop Post
           %hr
-          %div 各ドラックストアのマスクの最新入荷情報などを見ることができます。
+          %div 各ドラックストアが投稿した最新入荷情報などを見ることができます。
+.secondservise
+  = link_to comments_path, data: {"turbolinks" => false}, class: "#" do
+    .secondservise__images
+      .secondservise__images--box
+        %p Bulletin Board 
+        %hr
+        %div マスクの在庫情報を、皆さんで共有することができる掲示板です。
 .posts
   .posts__en
     NEW POSTS
