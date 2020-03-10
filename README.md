@@ -27,15 +27,15 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true,|
+|name|string||
 |email|string|null: false, unique: true|
 |password|string|null: false|
-|image|text|null: false|
-|address|string|null: false|
-|station|string|null: false, add_index|
-|station_walk|integer|null: false|
-|shop_holiday|string|null: false|
-|shop_time|stirng|null: false|
+|image|text||
+|address|string||
+|station|string|add_index|
+|station_walk|integer||
+|shop_holiday|string||
+|shop_time|stirng||
 
 ### Association
 - has_many :posts
@@ -64,6 +64,6 @@ Things you may want to cover:
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string||
-|text|string||
+|nickname|string|null: false|
+|text|string|null: false|
 
