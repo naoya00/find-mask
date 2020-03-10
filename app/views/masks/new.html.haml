@@ -10,13 +10,18 @@
         %br/
         = f.text_field :name,class: "maskform__box--name", placeholder:"例：超快適マスク プリーツタイプ ふつう50枚"
       .field
-        = f.label :image, :"外観写真" do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image
-          %span.select__image--text マスクのイメージを追加できます
-      .field
         = f.label :"在庫数(箱)"
         %br/
         = f.number_field  :stock,max:1000,min:1,class: "maskform__box--stock",placeholder: "在庫数を入力してください"
+      .field.image
+        = f.label 'マスク画像'
+        #img_field{onclick: "$('#file').click()"}
+          - if @mask.image.url.present?
+            = image_tag(@mask.image.url)
+          - else
+            %i.fas.fa-image
+            %i.fas.fa-file-upload.add
+        = f.file_field :image, class: "image", style: "display:none;", id: "file"
       = f.submit "Add mask", class: "maskform__box--submit"
-      
+
+
