@@ -1,12 +1,15 @@
 class ShopsController < ApplicationController
 
   def index
-    @shops = Shop.all
+    @shops = Shop.all.order("created_at DESC")
   end
 
   def show
     @shop = Shop.find(params[:id])
     @masks = @shop.masks.includes(:shop).order(updated_at: :desc)
+    unless @shop.name && @shop.station
+      redirect_to edit_shop_path(@shop.id)
+    end
   end
 
   def edit

@@ -20,4 +20,15 @@ $(function() {
     return false;
   });
 
+
+  $('.posts__box').slick({
+  autoplay: true, 
+  vertical: true, 
+  arrows: true,
+  slidesToShow:3,
+  centerMode:true,
+  prevArrow:'<i class="fas fa-arrow-circle-up"></i>',
+  nextArrow:'<i class="fas fa-arrow-circle-down"></i>'
+ });
+
   });
