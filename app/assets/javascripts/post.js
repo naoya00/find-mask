@@ -21,7 +21,7 @@ $(function() {
   });
 
 
-  $('.posts__box').slick({
+  $('#postslick').slick({
   autoplay: true, 
   vertical: true, 
   arrows: true,
