@@ -169,8 +169,15 @@ header{
     @include heading-japan();
   }
   &__box{
-    margin-top: 100px;
+    margin: 100px 0;
     padding: 0 200px;
+    text-align: center;
+    .fa-arrow-circle-up{
+      font-size: 30px;
+    }
+    .fa-arrow-circle-down{
+      font-size: 30px;
+    }
     .newpost__box{
       margin: 50px 0;
       text-align: center;

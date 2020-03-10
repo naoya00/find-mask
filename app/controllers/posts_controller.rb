@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.order(updated_at: :desc).limit(10).includes(:shop)
+    @posts = Post.order(updated_at: :desc).limit(15).includes(:shop)
   end
 
   def new

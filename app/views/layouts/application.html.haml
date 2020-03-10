@@ -21,12 +21,8 @@
         - if shop_signed_in?
           = link_to destroy_shop_session_path , class: "signup--btn",method: :delete do
             ログアウト
-          - if current_shop.name && current_shop.station
-            = link_to shop_path(current_shop.id), class:"login--btn"do
-              マイページ
-          - else
-            = link_to edit_shop_path(current_shop.id), class:"login--btn"do
-              マイページ
+          = link_to shop_path(current_shop.id), class:"login--btn"do
+            マイページ
         - else
           = link_to new_shop_registration_path , class: "signup--btn" do
             新規登録
