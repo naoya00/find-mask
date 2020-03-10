@@ -21,7 +21,7 @@
         - if shop_signed_in?
           = link_to destroy_shop_session_path , class: "signup--btn",method: :delete do
             ログアウト
-          = link_to shop_path(current_shop.id), class:"login--btn"do
+          = link_to shop_path(current_shop.id), class:"login--btn", data: {"turbolinks" => false} do
             マイページ
         - else
           = link_to new_shop_registration_path , class: "signup--btn" do

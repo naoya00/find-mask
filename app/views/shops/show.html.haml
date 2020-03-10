@@ -30,7 +30,10 @@
       - @masks.each do |mask|
         .mask-box
           .mask-box--image
-            = image_tag mask.image.url
+            - if mask.image.url
+              = image_tag mask.image.url
+            - else
+              .noimage__box
             - if shop_signed_in? && current_shop.id == mask.shop.id
               .mask-box--destroy
                 = link_to mask_path(mask.id), method: :delete do
@@ -43,13 +46,13 @@
               = mask.stock
 - if shop_signed_in? && current_shop.id == @shop.id
   .content__btns
-    = link_to edit_shop_path(@shop.id)do
+    = link_to edit_shop_path(@shop.id), data: {"turbolinks" => false}do
       .content__btn
         お店の情報を登録・更新
     = link_to new_shop_post_path(@shop.id) do
       .content__btn
         入荷情報を投稿する
-    = link_to new_shop_mask_path(@shop.id) do
+    = link_to new_shop_mask_path(@shop.id), data: {"turbolinks" => false} do
       .content__btn
         マスク在庫追加
 

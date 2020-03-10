@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: Sawarabi Mincho;
 }
 body{
   height: 100vh;
@@ -23,7 +24,7 @@ header{
   .findmask{
    font-size: 30px;
    color: $blue;
-
+   font-family: Roboto;
   }
   .header__lists{
     @include flex();
@@ -56,6 +57,7 @@ header{
     animation-delay: 1s;
     animation-fill-mode: forwards;
     position: absolute;
+    font-family: Roboto;
     @include moveanimation();
    }
   &__right{
@@ -66,12 +68,14 @@ header{
       color: $white;
       font-size: 30px;
       font-weight: bold;
+      font-family: Sawarabi Mincho;
     }
     h4{
       color: $white;
       font-size: 15px;
       font-weight: 200px;
       margin-top: 20px;
+      font-family: Sawarabi Mincho;
     }
     &--btn{
       border: solid 1px white;
@@ -80,6 +84,7 @@ header{
       text-decoration: none;
       margin-top: 80px;
       display: block;
+      font-family: Sawarabi Mincho;
     }
     }
 }

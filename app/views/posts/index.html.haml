@@ -40,7 +40,7 @@
     NEW POSTS
   .posts__ja
     新着情報
-  .posts__box
+  .posts__box#postslick
     - @posts.each do |post|
       = link_to shop_path(post.shop.id), class: "#" do
         .newpost__box
