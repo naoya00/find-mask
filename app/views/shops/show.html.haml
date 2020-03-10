@@ -46,7 +46,7 @@
               = mask.stock
 - if shop_signed_in? && current_shop.id == @shop.id
   .content__btns
-    = link_to edit_shop_path(@shop.id)do
+    = link_to edit_shop_path(@shop.id), data: {"turbolinks" => false}do
       .content__btn
         お店の情報を登録・更新
     = link_to new_shop_post_path(@shop.id) do

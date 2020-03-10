@@ -9,11 +9,15 @@
         = f.label :"店名"
         %br/
         = f.text_field :name ,maxlength:20, placeholder:"例：スーパードラック 渋谷２０２０号店(20字以内）"
-      .field
-        = f.label :image, :"外観写真" do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image
-          %span.select__image--text 外観写真を選択してください
+      .field.image
+        = f.label 'お店の外観写真'
+        #img_field{onclick: "$('#file').click()"}
+          - if @shop.image.url.present?
+            = image_tag(@shop.image.url)
+          - else
+            %i.fas.fa-image
+            %i.fas.fa-file-upload.add
+        = f.file_field :image, class: "image", style: "display:none;", id: "file"
       .field
         = f.label :"住所"
         %br/

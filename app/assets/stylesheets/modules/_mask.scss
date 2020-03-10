@@ -38,6 +38,7 @@
 #img_field {
   font-size: 15px;
   margin-top: 10px;
+  margin-bottom: 20px;
   padding: 5px 8px;
   border: solid 1px $blue;
   color: #666;
@@ -83,6 +84,9 @@
   width: 400px;
   height: 250px;
   background-size: contain;
+}
+.image{
+  display: inline;
 }
 .done__low{
   height: 100%;
