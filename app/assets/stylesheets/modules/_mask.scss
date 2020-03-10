@@ -1,5 +1,8 @@
 .maskform{
   height: 450px;
+  #mask_image{
+    display: none;
+  }
   &__ja{
   @include heading-japan;
   }
@@ -8,7 +11,12 @@
   padding-top: 20px;
   }
   &__box{
-    @include mainbox;
+    width: 80%;
+    background-color: #EEEEEE;
+    margin: 0 auto;
+    overflow: scroll;
+    padding: 30px 50px;
+    box-shadow: 0 0 8px $black;
     input{
       height: 40px;
       width: 100%;

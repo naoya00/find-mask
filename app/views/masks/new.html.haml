@@ -10,9 +10,10 @@
         %br/
         = f.text_field :name,class: "maskform__box--name", placeholder:"例：超快適マスク プリーツタイプ ふつう50枚"
       .field
-        = f.label :"画像"
-        %br/
-        = f.file_field  :image,class: "maskform__box--image"
+        = f.label :image, :"外観写真" do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image
+          %span.select__image--text マスクのイメージを追加できます
       .field
         = f.label :"在庫数(箱)"
         %br/
