@@ -35,6 +35,12 @@
     }
   }
 }
+.noimage__box--index{
+  height: 300px;
+  width: 400px;
+  background-image: url("noimage.jpg");
+  background-size: 100% 100%;
+}
 #img_field {
   font-size: 15px;
   margin-top: 10px;
@@ -113,4 +119,3 @@
     }
   }
 }
-

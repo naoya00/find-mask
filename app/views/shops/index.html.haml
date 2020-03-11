@@ -24,7 +24,10 @@
             - shop.masks.each do |mask|
               .search__box--mask
                 .search__box--mask-image
-                  = image_tag mask.image.url
+                  - if mask.image.url
+                    = image_tag mask.image.url
+                  - else
+                    .noimage__box--index
                 .search__box--mask-under
                   .search__box--mask-name
                     = mask.name
@@ -32,3 +35,4 @@
                     在庫（箱）：
                     %spam.search__box--mask-num
                       = mask.stock
+    = paginate @shops

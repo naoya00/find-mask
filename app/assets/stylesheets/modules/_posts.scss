@@ -29,16 +29,19 @@ header{
   .header__lists{
     @include flex();
     justify-content: space-around;
-    width: 500px;
+    // width: 600px;
     height: 50px;
     line-height: 50px;
     margin: auto 0;
     .signup--btn,.login--btn {
-    border: solid 1px $blue;
     padding: 0 20px;
     color: $white;
+    margin-left: 40px;
     background-color: $blue;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+    }
+    .gestbtn{
+      background-color: red;
     }
   }
 }
