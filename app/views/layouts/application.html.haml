@@ -28,5 +28,7 @@
             新規登録
           = link_to new_shop_session_path, class: "login--btn" do    
             ログイン
+          = link_to homes_guest_sign_in_path, method: :post,class: "login--btn gestbtn" do    
+            ゲストログイン(閲覧用)
     = yield
     %footer

@@ -42,19 +42,14 @@ $(function(){
     nextSelector: 'span.next:last a',
     loadingHtml: '読み込み中'
   });
-  
+
   $('.search__mainbox').jscroll({
     contentSelector: '.search__mainbox',
     nextSelector: 'span.next:last a',
     loadingHtml: '読み込み中'
   });
 
-
-
-
-
   $fileField = $('#file')
- 
   $($fileField).on('change', $fileField, function(e) {
     file = e.target.files[0]
     reader = new FileReader(),
