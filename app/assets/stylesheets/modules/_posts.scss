@@ -88,6 +88,10 @@ header{
       margin-top: 80px;
       display: block;
       font-family: Sawarabi Mincho;
+      &:hover{
+        transform: translate(-2.5px, -2.5px);
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+      }
     }
     }
 }
@@ -110,6 +114,11 @@ header{
       background-size: 100% 100%;
       position: relative;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+      transform: translate(-2.5px, -2.5px);
+      &:hover{
+        box-shadow: none;
+        transform: none;
+      }
       &-box{
       @include boxabsolute;
       color: $black;
@@ -129,6 +138,11 @@ header{
       background-size: 100% 100%;
       position: relative;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+      transform: translate(-2.5px, -2.5px);
+      &:hover{
+        box-shadow: none;
+        transform: none;
+      }
       &-box{
         @include boxabsolute;
         color: $black;
@@ -154,6 +168,11 @@ header{
     position: relative;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
     margin: 0 auto;
+    transform: translate(-2.5px, -2.5px);
+      &:hover{
+        box-shadow: none;
+        transform: none;
+      }
     &--box{
       @include boxabsolute;
       color: $black;
@@ -175,6 +194,15 @@ header{
   }
   &__ja{
     @include heading-japan();
+    & :nth-child(1){
+      font-weight: 700;
+      font-size: 30px;
+    }
+    & :nth-child(2){
+      font-size: 15px;
+      margin-top: 15px;
+      font-weight: 500;
+    }
   }
   &__box{
     margin: 100px 0;

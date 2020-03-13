@@ -39,7 +39,10 @@
   .posts__en
     NEW POSTS
   .posts__ja
-    新着情報
+    %div
+      新着情報 
+    %div
+      クリックするとお店の詳細ページにいけます
   .posts__box#postslick
     - @posts.each do |post|
       = link_to shop_path(post.shop.id), class: "#" do
