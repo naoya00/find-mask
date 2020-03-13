@@ -8,10 +8,10 @@
     = f.submit "検索", class: "search-btn"
   .search__mainbox
     - @shops.each do |shop|
-      - if shop.name && shop.station
-        = link_to shop_path(shop.id), class: "#" do
-          .search__box
-            .search__box--contens
+      - if shop.name && shop.masks.length >= 1 
+        .search__box
+          .search__box--contens
+            = link_to shop_path(shop.id), class: "#" do
               .search__name
                 = shop.name
               %hr
@@ -20,15 +20,18 @@
                 駅から徒歩
                 = shop.station_walk
                 分
-            .search__box--masks
-              - shop.masks.each do |mask|
-                .search__box--mask
-                  .search__box--mask-image
+          .search__box--masks
+            - shop.masks.each do |mask|
+              .search__box--mask
+                .search__box--mask-image
+                  - if mask.image.url
                     = image_tag mask.image.url
-                  .search__box--mask-under
-                    .search__box--mask-name
-                      = mask.name
-                    .search__box--mask-stock
-                      在庫（箱）：
-                      %spam.search__box--mask-num
-                        = mask.stock
+                  - else
+                    .noimage__box--index
+                .search__box--mask-under
+                  .search__box--mask-name
+                    = mask.name
+                  .search__box--mask-stock
+                    在庫（箱）：
+                    %spam.search__box--mask-num
+                      = mask.stock
