@@ -175,6 +175,15 @@ header{
   }
   &__ja{
     @include heading-japan();
+    & :nth-child(1){
+      font-weight: 700;
+      font-size: 30px;
+    }
+    & :nth-child(2){
+      font-size: 15px;
+      margin-top: 15px;
+      font-weight: 500;
+    }
   }
   &__box{
     margin: 100px 0;

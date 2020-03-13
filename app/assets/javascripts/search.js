@@ -26,10 +26,11 @@ $(function() {
 
   function appendmask(mask,id){
 
-      var name = mask.name
-      var img = mask.image.url
-      var stock = mask.stock
-      var html = `<div class="search__box--mask">
+    if (mask.image.url){
+    var name = mask.name
+    var img = mask.image.url
+    var stock = mask.stock
+    var html = `<div class="search__box--mask">
     <div class="search__box--mask-image">
     <img src="${img}">
     </div>
@@ -47,6 +48,30 @@ $(function() {
     </div>`
       var apennding = ".search__box--masks" + id;
       $(apennding).append(html)
+    } else {
+    var name = mask.name
+    var stock = mask.stock
+    var html = `<div class="search__box--mask">
+    <div class="search__box--mask-image">
+    <div class="noimage__box--index"></div>
+    </div>
+    <div class="search__box--mask-under">
+    <div class="search__box--mask-name">
+    ${name}
+    </div>
+    <div class="search__box--mask-stock">
+    在庫（箱）：
+    <spam class="search__box--mask-num">
+    ${stock}
+    </spam>
+    </div>
+    </div>
+    </div>`
+      var apennding = ".search__box--masks" + id;
+      $(apennding).append(html)
+    }
+
+
 
 }
 function appendErrMsgToHTML(msg) {
@@ -78,19 +103,3 @@ function appendErrMsgToHTML(msg) {
     })
   });
 });
-
-
-// $(function() {
-//   $(".search-input").on("keyup", function() {
-//     var input = $(".search-input").val();
-//     $.ajax({
-//       type: 'GET',
-//       url: '/shops/search',
-//       data: { keyword: input },
-//       dataType: 'json'
-//     })
-//     .done(function(tweets) {
-//       console.log(tweets);
-//     })
-//   });
-// });
