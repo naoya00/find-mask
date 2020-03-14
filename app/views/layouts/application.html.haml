@@ -22,11 +22,14 @@
           サービス一覧
           %ul.dropdwn_menu
             %li
-              %a{:href => "#"} 在庫検索
+              = link_to shops_path, data: {"turbolinks" => false}, class: "#" do
+                在庫検索
             %li
-              %a{:href => "#"} マスク入荷情報
+              = link_to root_path(anchor: "posts"), data: {"turbolinks" => false}, class: "#" do
+                マスク入荷情報
             %li
-              %a{:href => "#"} 掲示板
+              = link_to comments_path, data: {"turbolinks" => false}, class: "#" do
+                掲示板
       .header__lists
         .header__lists--left
           薬局の方はコチラ：
