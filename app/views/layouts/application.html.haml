@@ -15,6 +15,18 @@
     %header
       = link_to root_path , data: {"turbolinks" => false}, class: "findmask" do
         Find  Mask
+      %ul.dropdwn
+        %li.menu__btn
+          ▼
+          %span
+          サービス一覧
+          %ul.dropdwn_menu
+            %li
+              %a{:href => "#"} 在庫検索
+            %li
+              %a{:href => "#"} マスク入荷情報
+            %li
+              %a{:href => "#"} 掲示板
       .header__lists
         .header__lists--left
           薬局の方はコチラ：
