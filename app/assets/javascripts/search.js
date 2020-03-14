@@ -1,5 +1,5 @@
 $(function() {
-  var search_list = $(".jscroll-inner");
+  var search_list = $(".search__mainbox");
 
   function appendShop(shop) {
     var html = `<div class="search__box">
