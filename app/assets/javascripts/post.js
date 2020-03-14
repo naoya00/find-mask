@@ -31,4 +31,11 @@ $(function() {
   nextArrow:'<i class="fas fa-arrow-circle-down"></i>'
  });
 
+//  $('.search__box--masks').slick({
+//   autoplay: true, 
+//   arrows: true,
+//   prevArrow:'<i class="fas fa-arrow-circle-up"></i>',
+//   nextArrow:'<i class="fas fa-arrow-circle-down"></i>'
+//  });
+
   });

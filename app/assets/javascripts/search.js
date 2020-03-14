@@ -19,9 +19,7 @@ $(function() {
     </div>
     </div>`
     search_list.append(html);
-    shop.masks.forEach(function(mask){
-      appendmask(mask,shop.id);
-    })
+    
   }
 
   function appendmask(mask,id){
@@ -95,6 +93,9 @@ function appendErrMsgToHTML(msg) {
       if (shops.length !== 0) {
         shops.forEach(function(shop){
           appendShop(shop);
+          shop.masks.forEach(function(mask){
+            appendmask(mask,shop.id);
+          })
         });
       }
       else {
