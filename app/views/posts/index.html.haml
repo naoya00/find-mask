@@ -10,7 +10,7 @@
       マスク入手困難を解決する
     = link_to "#", class: "topcontens__right--btn" do
       サービス案内
-.servise
+.servise#servise
   .servise__en
     SERVICE
   .servise__ja
@@ -35,7 +35,7 @@
         %p Bulletin Board 
         %hr
         %div マスクの在庫情報を、皆さんで共有することができる掲示板です。
-.posts
+.posts#posts
   .posts__en
     NEW POSTS
   .posts__ja
@@ -45,7 +45,7 @@
       クリックするとお店の詳細ページにいけます
   .posts__box#postslick
     - @posts.each do |post|
-      = link_to shop_path(post.shop.id), class: "#" do
+      = link_to shop_path(post.shop.id), data: {"turbolinks" => false}, class: "#" do
         .newpost__box
           %span.newpost__box--date
             = post.created_at

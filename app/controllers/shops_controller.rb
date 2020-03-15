@@ -1,7 +1,7 @@
 class ShopsController < ApplicationController
 
   def index
-    @shops = Shop.all.page(params[:page]).per(5)
+    @shops = Shop.all
   end
 
   def show

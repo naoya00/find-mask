@@ -15,20 +15,39 @@
     %header
       = link_to root_path , data: {"turbolinks" => false}, class: "findmask" do
         Find  Mask
+      %ul.dropdwn
+        %li.menu__btn
+          ▼
+          %span
+          サービス一覧
+          %ul.dropdwn_menu
+            %li
+              = link_to comments_path, data: {"turbolinks" => false}, class: "#" do
+                掲示板
+            %li
+              = link_to shops_path, data: {"turbolinks" => false}, class: "#" do
+                在庫検索
+            %li
+              = link_to root_path(anchor: "posts"), data: {"turbolinks" => false}, class: "#" do
+                マスク入荷情報
+            %li
+              = link_to root_path(anchor: "servise"), data: {"turbolinks" => false}, class: "#" do
+                サービスのご案内
       .header__lists
         .header__lists--left
           薬局の方はコチラ：
         - if shop_signed_in?
-          = link_to destroy_shop_session_path , class: "signup--btn",method: :delete do
+          = link_to destroy_shop_session_path, data: {"turbolinks" => false} , class: "signup--btn",method: :delete do
             ログアウト
-          = link_to shop_path(current_shop.id), class:"login--btn", data: {"turbolinks" => false} do
+          = link_to shop_path(current_shop.id), data: {"turbolinks" => false}, class:"login--btn", data: {"turbolinks" => false} do
             マイページ
         - else
-          = link_to new_shop_registration_path , class: "signup--btn" do
+          = link_to new_shop_registration_path , data: {"turbolinks" => false}, class: "signup--btn" do
             新規登録
-          = link_to new_shop_session_path, class: "login--btn" do    
+          = link_to new_shop_session_path, data: {"turbolinks" => false} ,class: "login--btn" do    
             ログイン
-          = link_to homes_guest_sign_in_path, method: :post,class: "login--btn gestbtn" do    
+          = link_to homes_guest_sign_in_path, data: {"turbolinks" => false}, method: :post,class: "login--btn gestbtn" do    
             ゲストログイン(閲覧用)
-    = yield
+    #main-content
+      = yield
     %footer

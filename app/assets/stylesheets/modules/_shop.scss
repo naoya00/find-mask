@@ -73,11 +73,19 @@
         }
         &--destroy{
           position: absolute;
-          left: 360px;
+          left: 320px;
           top: 10px;
           font-size: 30px;
+          height: 60px;
+          line-height: 60px;
+          width: 60px;
+          text-align: center;
+          border-radius: 50%;
+          background-color: $black;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+          opacity: 0.7;
           i{
-            color: $black;
+            color: $white;
           }
         }
       }
@@ -147,7 +155,7 @@
   .search__box--mask{
     height: 100%;
     width: 33%;
-    margin-right: 20px;
+    margin-right: 40px;
     text-align: center;
     &-image{
       height: 300px;

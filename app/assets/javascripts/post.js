@@ -31,4 +31,15 @@ $(function() {
   nextArrow:'<i class="fas fa-arrow-circle-down"></i>'
  });
 
+
+
+$('.dropdwn li').hover(function(){
+    $("ul:not(:animated)", this).slideDown();
+}, function(){
+    $("ul.dropdwn_menu",this).slideUp();
+});
+
+
+
   });
+

@@ -7,7 +7,9 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 module FindMask
   class Application < Rails::Application
+    
     # Initialize configuration defaults for originally generated Rails version.
+    config.time_zone = 'Tokyo'
     config.generators do |g|
       g.stylesheets false
       g.javascripts false
