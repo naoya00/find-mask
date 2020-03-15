@@ -6,7 +6,6 @@ class MasksController < ApplicationController
    
   def create
     Mask.create(mask_params)
-    redirect_to shop_path(current_shop.id)
   end
 
   def destroy

@@ -19,5 +19,4 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:nickname,:text)
   end
 
-
 end
