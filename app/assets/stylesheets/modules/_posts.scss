@@ -284,6 +284,7 @@ header{
 }
 .postform{
   height: 450px;
+  display: inline;
   &__ja{
   @include heading-japan;
   }
@@ -309,11 +310,14 @@ header{
     }
   }
 }
-
+footer {
+  color: $blue;
+  p {
+    text-align: center;
+    margin: 30px 0;
+  }
+}
 
 .space{
   margin: 0 10px;
 }
-
-
-
