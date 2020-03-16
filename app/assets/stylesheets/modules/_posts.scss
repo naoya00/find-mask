@@ -46,7 +46,7 @@ header{
   .menu__btn{
     height: 50px;
     background-color: $blue;
-    color: #ffffff;
+    color:$white;
     width: 160px;
     text-align: center;
     line-height: 50px;
@@ -73,7 +73,7 @@ header{
       width: 100%;
       & a{
         display: block;
-        color: #fff;
+        color:$white;
         &:hover{
           background: $white;
           color: $blue;
@@ -91,7 +91,6 @@ header{
   &__logo{
     color: white;
     font-size: 40px;
-    border: white solid 1px;
     padding: 20px 80px;
     opacity: 0;
     animation: logo 5s, movecontent 5s;
@@ -99,7 +98,10 @@ header{
     animation-fill-mode: forwards;
     position: absolute;
     font-family: Roboto;
+    box-shadow: inset 0 0 20px 5px ;
+    border: white solid 1px;
     @include moveanimation();
+
    }
   &__right{
     position: absolute;

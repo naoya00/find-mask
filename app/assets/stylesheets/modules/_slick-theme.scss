@@ -192,3 +192,8 @@ $slick-opacity-not-active: 0.25 !default;
         }
     }
 }
+.slick-center{
+  font-weight: bold;
+  box-shadow: inset 0 0 20px 5px $blue;
+  border-radius: 50px;
+}
