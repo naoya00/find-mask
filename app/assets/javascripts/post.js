@@ -1,5 +1,4 @@
 $(function() {
-
   $('.btn__newpost').click(function() {
     var speed = 400; 
     var target = $(".posts");
@@ -20,7 +19,6 @@ $(function() {
     return false;
   });
 
-
   $('#postslick').slick({
   autoplay: true, 
   vertical: true, 
@@ -29,17 +27,12 @@ $(function() {
   centerMode:true,
   prevArrow:'<i class="fas fa-arrow-circle-up"></i>',
   nextArrow:'<i class="fas fa-arrow-circle-down"></i>'
- });
+  });
 
-
-
-$('.dropdwn li').hover(function(){
+  $('.dropdwn li').hover(function(){
     $("ul:not(:animated)", this).slideDown();
-}, function(){
+  }, function(){
     $("ul.dropdwn_menu",this).slideUp();
-});
-
-
-
+  });
   });
 

@@ -11,7 +11,7 @@
       - if shop.name && shop.masks.length >= 1 
         .search__box
           .search__box--contens
-            = link_to shop_path(shop.id), class: "#" do
+            = link_to shop_path(shop.id) do
               .search__name
                 = shop.name
               %hr

@@ -1,12 +1,10 @@
 @mixin flex {
   display: flex;
 }
-
 @mixin flex-between {
   display: flex;
   justify-content: space-between;
 }
-
 @mixin boxabsolute {
   height: 150px;
   width: 400px;
@@ -18,13 +16,11 @@
   padding: 15px 20px;
   text-align: center;
 }
-
 @mixin box-design {
   font-size: 25px;
   font-weight: bold;
   color: $white;
 }
-
 @mixin heading-japan {
   font-size: 20px;
   text-align: center;
@@ -37,7 +33,6 @@
     text-align: center;
     color: $blue;
 }
-
 @mixin mainbox {
   width: 80%;
   background-color: #EEEEEE;
@@ -46,4 +41,12 @@
   overflow: scroll;
   padding: 30px 50px;
   box-shadow: 0 0 8px $black;
+}
+@mixin shadow_btn {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+  transform: translate(-2.5px, -2.5px);
+  &:hover{
+    box-shadow: none;
+    transform: none;
+  }
 }

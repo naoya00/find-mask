@@ -19,12 +19,12 @@ $(function() {
     </div>
     </div>`
     search_list.append(html);
-    
   }
 
   function appendmask(mask,id){
+    var apennding = ".search__box--masks" + id;
 
-    if (mask.image.url){
+  if (mask.image.url){
     var name = mask.name
     var img = mask.image.url
     var stock = mask.stock
@@ -44,9 +44,8 @@ $(function() {
     </div>
     </div>
     </div>`
-      var apennding = ".search__box--masks" + id;
       $(apennding).append(html)
-    } else {
+  } else {
     var name = mask.name
     var stock = mask.stock
     var html = `<div class="search__box--mask">
@@ -65,20 +64,14 @@ $(function() {
     </div>
     </div>
     </div>`
-      var apennding = ".search__box--masks" + id;
       $(apennding).append(html)
-    }
-
-
-
+  }
 }
+
 function appendErrMsgToHTML(msg) {
-  var html = `<div class='name'>${ msg }</div>`
+  var html = `<div class='name'>"${ msg }"駅の徒歩圏内で在庫があるお店が見つかりませんでした。</div>`
   search_list.append(html);
 }
-
-
-
 
   $(".search-input").on("keyup", function() {
     var input = $(".search-input").val();
@@ -99,7 +92,7 @@ function appendErrMsgToHTML(msg) {
         });
       }
       else {
-        appendErrMsgToHTML("一致する駅名がありません");
+        appendErrMsgToHTML(input);
       }
     })
   });
