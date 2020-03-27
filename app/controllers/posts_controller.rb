@@ -9,7 +9,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    @post = Post.new(post_params)
+    if @post.save
+      render :create
+    else
+      redirect_to new_shop_post_path(@post.shop.id), notice: '投稿内容は空では登録できません。'
+    end
   end
 
   private
