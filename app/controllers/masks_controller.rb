@@ -5,7 +5,12 @@ class MasksController < ApplicationController
   end
    
   def create
-    Mask.create(mask_params)
+    @mask = Mask.new(mask_params)
+    if @mask.save
+      render :create
+    else
+      redirect_to new_shop_mask_path(@mask.shop.id), notice: 'マスク名、在庫数は空では登録できません。'
+    end
   end
 
   def destroy
