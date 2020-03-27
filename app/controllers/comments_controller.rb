@@ -6,10 +6,16 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.create(comment_params)
-    respond_to do |format|
-      format.html { redirect_to comments_path  }
-      format.json
+    @comment = Comment.new(comment_params)
+
+    if @comment.save
+      respond_to do |format|
+        format.json
+      end
+    else
+      @comments = Comment.all.order(updated_at: :desc).page(params[:page]).per(5)
+      flash.now[:alert] = '空の値があります'
+      render :index
     end
   end
 

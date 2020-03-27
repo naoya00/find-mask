@@ -34,7 +34,8 @@ $(function(){
       $('.comments__form--box-submit').prop('disabled', false);
     })
     .fail(function(){
-      alert('error');
+      alert('空の値があります');
+      $('.comments__form--box-submit').prop('disabled', false);
     })
   })
   $('.comments--underbox').jscroll({
