@@ -1,4 +1,4 @@
-$(function() {
+document.addEventListener("turbolinks:load", function() {
   $('.btn__newpost').click(function() {
     var speed = 400; 
     var target = $(".posts");

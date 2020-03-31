@@ -16,7 +16,7 @@
   .servise__ja
     サービスのご案内
   .servise__images
-    = link_to shops_path, data: {"turbolinks" => false} do
+    = link_to shops_path do
       .servise__images--left
         .servise__images--left-box
           %p Search
@@ -29,7 +29,7 @@
           %hr
           %div 各ドラックストアが投稿した最新入荷情報などを見ることができます。
 .secondservise
-  = link_to comments_path, data: {"turbolinks" => false} do
+  = link_to comments_path do
     .secondservise__images
       .secondservise__images--box
         %p Bulletin Board 
@@ -45,7 +45,7 @@
       クリックするとお店の詳細ページにいけます
   .posts__box#postslick
     - @posts.each do |post|
-      = link_to shop_path(post.shop.id), data: {"turbolinks" => false} do
+      = link_to shop_path(post.shop.id) do
         .newpost__box
           %span.newpost__box--date
             = post.created_at

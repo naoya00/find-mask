@@ -1,4 +1,4 @@
-$(function() {
+document.addEventListener("turbolinks:load", function() {
   var search_list = $(".search__mainbox");
 
   function appendShop(shop) {

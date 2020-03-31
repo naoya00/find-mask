@@ -1,4 +1,4 @@
-$(function(){
+document.addEventListener("turbolinks:load", function() {
   function buildHTML(comment){
     var html = `<div class="newpost__box comments__box">
     <span class="newpost__box--date">

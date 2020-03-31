@@ -1,4 +1,4 @@
-$(function(){
+document.addEventListener("turbolinks:load", function() {
   $fileField = $('#file')
   $($fileField).on('change', $fileField, function(e) {
     file = e.target.files[0]
