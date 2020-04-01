@@ -1,7 +1,7 @@
 class ShopsController < ApplicationController
 
   def index
-    @shops = Shop.all
+    @shops = Shop.page(params[:page]).per(5)
   end
 
   def show
@@ -26,7 +26,7 @@ class ShopsController < ApplicationController
     shopall = Shop.search(params[:keyword])
     @shops = []
     shopall.each do |shop|
-      if shop.masks.length >= 1 && shop.name
+      if shop.masks.length >= 1
         @shops << shop
       end
     end
