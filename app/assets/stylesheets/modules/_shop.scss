@@ -218,3 +218,14 @@
     height: 920px;
   }
 }
+.paginaiteLow{
+  & .pagination{
+    font-size: 1.5em;
+    & span{
+      margin: 0 4px;
+    }
+    & a{
+      color: $blue;
+    }
+  }
+}
