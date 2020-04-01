@@ -25,4 +25,5 @@
         %hr/
         .newpost__box--content
           = comment.text
-    = paginate @comments
+    .commentPaginate 
+      = paginate @comments
