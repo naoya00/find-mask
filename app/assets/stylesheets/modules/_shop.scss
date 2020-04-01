@@ -213,6 +213,8 @@
     cursor: pointer;
   }
 }
-#new_shop{
-  height: 920px;
+.editcontainer{
+  & .new_shop{
+    height: 920px;
+  }
 }

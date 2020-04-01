@@ -3,7 +3,7 @@
     Edit Shop
   .postform__ja
     お店情報登録・更新
-  .container
+  .container.editcontainer
     = form_with model: @shop, id: 'new_shop', class: 'new_shop', local: true do |f|
       .field
         = f.label :"店名"
