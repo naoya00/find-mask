@@ -22,6 +22,7 @@
 ・scss<br>
 ・javascript<br>
 ・jqueri<br>
+・Mysql<br>
 ・AWS<br>
 ・VScode<br>
 
