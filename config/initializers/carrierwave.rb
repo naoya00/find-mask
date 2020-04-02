@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'find-mask00'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/find-mask'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/find-mask00'
 end
