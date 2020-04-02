@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: find-mask_production
-  username: find-mask
-  password: <%= ENV['FIND-MASK_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
