@@ -301,6 +301,9 @@ footer {
     left: 35px;
     top: 105px;
    }
+  .mobileVar{
+    display: none;
+  }
   .topcontens{
     position: relative;
    &__logo{
@@ -326,6 +329,9 @@ footer {
  .menu__btn{
   right: 10px;
   top: 10px;
+ }
+ .mobileVar_black{
+   background-color: $black;
  }
  .topcontens{
   position: relative;
