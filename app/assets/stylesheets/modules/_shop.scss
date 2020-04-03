@@ -15,14 +15,14 @@
     &--image{
       height: 240px;
       width: 400px;
-      background-image: url("noimage.jpg");
+      background-image: image-url("noimage.jpg");
       background-size: 100% 100%;
       margin: 50px 0 0 60px;
     }
     .noimage__box{
       height: 240px;
       width: 400px;
-      background-image: url("noimage.jpg");
+      background-image: image-url("noimage.jpg");
       background-size: 100% 100%;
     }
     &--contens{
