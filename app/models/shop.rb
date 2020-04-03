@@ -6,7 +6,6 @@ class Shop < ApplicationRecord
 
   #バリデーション記述
   validates :name, presence: true
-  validates :image, presence: true
   validates :address, presence: true
   validates :station, presence: true
   validates :station_walk, presence: true

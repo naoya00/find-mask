@@ -19,12 +19,6 @@ describe Shop do
      expect(shop.errors[:name]).to include("を入力してください")
     end
 
-    it "店舗画像が空では登録できない" do
-      shop = build(:shop, image: "")
-      shop.valid?
-     expect(shop.errors[:image]).to include("を入力してください")
-    end
-
     it "住所が空では登録できない" do
       shop = build(:shop, address: "")
       shop.valid?
