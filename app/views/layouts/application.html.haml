@@ -2,6 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width,initial-scale=1.0", :name => "viewport"}
     %title FindMask
     = csrf_meta_tags
     = csp_meta_tag
@@ -33,6 +34,26 @@
             %li
               = link_to root_path(anchor: "servise"), class: "#" do
                 サービスのご案内
+            %li.mobileVar.mobileVar_black
+              = link_to "#", class: "#" do
+                ▼薬局の方はこちら
+            - if shop_signed_in?
+              %li.mobileVar
+                = link_to destroy_shop_session_path, class: "#" do
+                  ログアウト
+              %li.mobileVar
+                = link_to shop_path(current_shop.id), class: "#" do
+                  マイページ
+            - else
+              %li.mobileVar
+                = link_to new_shop_registration_path, class: "#" do
+                  新規登録
+              %li.mobileVar
+                = link_to new_shop_session_path, class: "#" do
+                  ログイン
+              %li.mobileVar
+                = link_to homes_guest_sign_in_path, class: "#" do
+                  ゲストログイン
       .header__lists
         .header__lists--left
           薬局の方はコチラ：

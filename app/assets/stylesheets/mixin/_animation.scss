@@ -27,3 +27,34 @@
     }
   }
 }
+
+
+@mixin moveanimation_mobile {
+  @keyframes logo {
+    0% {
+      opacity: 0;
+      }
+      25% {
+      opacity: 10%;
+      }
+      50% {
+       opacity: 20%;
+      }
+      75% {
+      opacity: 60%;
+      }
+      100% {
+      opacity: 100%;
+      }
+  }
+  @keyframes movecontent {
+    0% {
+      top: 0;
+      left: 20%;
+    }
+    100% {
+      top: 30%;
+      left: 20%;
+    }
+  }
+}
