@@ -39,7 +39,7 @@
                 ▼薬局の方はこちら
             - if shop_signed_in?
               %li.mobileVar
-                = link_to destroy_shop_session_path, class: "#" do
+                = link_to destroy_shop_session_path,method: :delete, class: "#" do
                   ログアウト
               %li.mobileVar
                 = link_to shop_path(current_shop.id), class: "#" do
@@ -52,7 +52,7 @@
                 = link_to new_shop_session_path, class: "#" do
                   ログイン
               %li.mobileVar
-                = link_to homes_guest_sign_in_path, class: "#" do
+                = link_to homes_guest_sign_in_path, method: :post, class: "#" do
                   ゲストログイン
       .header__lists
         .header__lists--left
