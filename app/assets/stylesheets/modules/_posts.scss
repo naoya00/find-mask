@@ -338,7 +338,7 @@ footer {
   height: 100vh;
  &__logo{
   @include moveanimation_mobile();
-  padding: 20px;
+  padding: 10px;
  }
  &__right{
   left: 15%;
