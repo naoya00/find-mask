@@ -1,5 +1,4 @@
 .maskform{
-  height: 450px;
   #mask_image{
     display: none;
   }
@@ -116,6 +115,17 @@
     color: $white;
     border-radius: 20px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+    }
+  }
+}
+
+// スマホ用
+@media screen and (max-width: 480px){ 
+  .maskform__box{
+    width: 95%;
+    padding: 10px 20px;
+    &--submit{
+      margin-bottom: 10px !important;
     }
   }
 }
