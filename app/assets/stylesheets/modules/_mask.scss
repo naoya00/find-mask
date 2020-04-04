@@ -126,4 +126,15 @@
       margin-bottom: 10px !important;
     }
   }
+  .done__low{
+    margin: 0;
+    padding-top: 10px;
+    & .done__box{
+      height: 700px;
+      &--success{
+        width: calc(100% - 20px) !important;
+        margin: 150px 10px;
+      }
+    }
+  }
 }
