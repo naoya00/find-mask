@@ -224,7 +224,6 @@ header{
     }
   }
   &__box{
-    margin: 100px 0;
     padding: 0 200px;
     text-align: center;
     .fa-arrow-circle-up{
@@ -298,6 +297,7 @@ footer {
 @media screen and (max-width: 1582px) {
   .servise{
     padding: 90px 80px;
+
   } 
 }
 
@@ -358,6 +358,7 @@ footer {
 }
 .servise{
   padding: 90px 0 0 0;
+  margin: 0 10px;
   &__images{
     display: block;
     &--left{
@@ -378,10 +379,13 @@ footer {
     }
   }
 }
-.secondservise__images{
-  width: 100%;
-  &--box{
-    width: auto;
+.secondservise {
+  margin: 50px 10px;
+  &__images{
+    width: 100%;
+    &--box{
+      width: auto;
+    }
   }
 }
 .posts__box{
