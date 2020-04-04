@@ -19,9 +19,9 @@
     width: 100%;
     height: 40px;
     margin: 10px 0 20px 0;
-  }
+    border: solid 1px $blue;
+ }
 }
-
 // editの画像選択ボタン
 #shop_image{
   display: none;
@@ -54,7 +54,7 @@ line-height: 90px;
   #img_field{
     width: 100% !important; 
   }
-  #main-content{
+  .container{
     margin: 0 10px;
   }
 }
