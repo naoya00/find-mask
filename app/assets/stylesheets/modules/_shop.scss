@@ -125,14 +125,11 @@
   text-align: center;
 }
 .search__box{
-  height: 500px;
  margin: 40px 100px;
  box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
  padding: 30px 30px;
- position: relative;
  background-color: #eeeeee;
  &--contens{
-   height: 100px;
    text-align: center;
    &:hover{
      opacity: 0.7;
@@ -155,9 +152,6 @@
   @include flex;
   overflow: scroll;
   width: calc(100% - 60px);
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
   .search__box--mask{
     width: 33%;
     margin-right: 40px;
@@ -172,6 +166,9 @@
       height: 200px;
       display: inline-flex;
       padding-top: 20px;
+      & img{
+        width: 100%;
+      }
     }
     &-name{
       font-size: 20px;
@@ -191,7 +188,6 @@
 }
 .search-form{
   text-align: center;
-  height: 100px;
   .search-input{
     height: 60px;
     margin-left: 20px;
@@ -269,4 +265,40 @@
       margin-bottom: 15px;
     }
   }
-}
+
+  // search
+  .search-form{
+    margin: 0 10px;
+    & .search-input{
+      margin: 0 0 20px 0;
+      width: 100%;
+      padding-left: 5px;
+    }
+    & .search-btn{
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+  }
+  .search__box{
+    margin: 20px 10px !important;
+    padding: 15px !important;
+    & .search__name{
+      font-size: 23px !important;
+      text-shadow: 1px 1px 0px $black;
+   }
+   &--masks{
+     width: 100% !important;
+     scroll-snap-type: x mandatory;
+     white-space: nowrap;
+     overflow: auto;
+     display: block !important;
+   }
+   &--mask{
+     width: 100% !important;
+     margin: 0  !important;
+     scroll-snap-align: center;
+    display: inline-block;
+    white-space: normal;
+   }
+    }
+  }
