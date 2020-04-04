@@ -1,5 +1,4 @@
 .maskform{
-  height: 450px;
   #mask_image{
     display: none;
   }
@@ -32,6 +31,7 @@
       margin-bottom: 10px;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
       border-radius: 20px;
+      cursor: pointer;
     }
   }
 }
@@ -87,9 +87,7 @@
   color: #fff;
 }
 .preview{
-  width: 400px;
-  height: 250px;
-  background-size: contain;
+ height: 100%;
 }
 .image{
   display: inline;
@@ -116,6 +114,28 @@
     color: $white;
     border-radius: 20px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+    }
+  }
+}
+
+// スマホ用
+@media screen and (max-width: 480px){ 
+  .maskform__box{
+    width: 95%;
+    padding: 10px 20px;
+    &--submit{
+      margin-bottom: 10px !important;
+    }
+  }
+  .done__low{
+    margin: 0;
+    padding-top: 10px;
+    & .done__box{
+      height: 700px;
+      &--success{
+        width: calc(100% - 20px) !important;
+        margin: 150px 10px;
+      }
     }
   }
 }

@@ -26,32 +26,32 @@
         %span.space
         定休日：
         = @shop.shop_holiday
-    .shop__box--masks
-      - @masks.each do |mask|
-        .mask-box
-          .mask-box--image
-            - if mask.image.url
-              = image_tag mask.image.url
-            - else
-              .noimage__box
-            - if shop_signed_in? && current_shop.id == mask.shop.id
-              .mask-box--destroy
-                = link_to mask_path(mask.id), method: :delete do
-                  %i.fas.fa-trash-alt
-          .mask-box--under
-            .mask-box--name
-              = mask.name
-            .mask-box--stock
-              在庫（箱）：
-              = mask.stock
+  .shop__box--masks
+    - @masks.each do |mask|
+      .mask-box
+        .mask-box--image
+          - if mask.image.url
+            = image_tag mask.image.url
+          - else
+            .noimage__box
+          - if shop_signed_in? && current_shop.id == mask.shop.id
+            .mask-box--destroy
+              = link_to mask_path(mask.id), method: :delete do
+                %i.fas.fa-trash-alt
+        .mask-box--under
+          .mask-box--name
+            = mask.name
+          .mask-box--stock
+            在庫（箱）：
+            = mask.stock
 - if shop_signed_in? && current_shop.id == @shop.id
   .content__btns
     = link_to edit_shop_path(@shop.id) do
       .content__btn
-        お店の情報を登録・更新
+        店舗情報を変更
     = link_to new_shop_post_path(@shop.id) do
       .content__btn
-        入荷情報を投稿する
+        入荷情報を投稿
     = link_to new_shop_mask_path(@shop.id) do
       .content__btn
         マスク在庫追加

@@ -1,5 +1,4 @@
 .shop{
-  height: 1100px;
   &__en{
     padding-top: 50px;
     @include heading-english;
@@ -9,9 +8,7 @@
   }
   &__box{
     @include mainbox;
-    height: 850px;
     @include flex-between;
-    position: relative;
     &--image{
       height: 240px;
       width: 400px;
@@ -27,11 +24,9 @@
     }
     &--contens{
       width: 700px;
-      height: 350px;
       padding:20px 30px;
       color: $black;
       .shop__content{
-        height: 60px;
         width: 100%;
         margin-top:10px;
         line-height: 60px;
@@ -42,23 +37,21 @@
       }
     }
     &--masks{
-      height: 280px;
-      width: calc(100% - 100px);
-      position: absolute;
-      bottom: 30px;
+      width: 80%;
+      margin: 20px auto;
+      box-shadow: 0 0 8px $black;
+     background-color: #EEEEEE;
       @include flex;
-      overflow: scroll;
+      flex-wrap: wrap;
       .mask-box{
         height: 100%;
-        width: 33%;
-        margin-right: 20px;
+        margin: 20px;
         box-shadow: inset 0 0 8px 0px black;
         background-color: white;
         padding-top: 10px;
         border-radius: 40px;
         &--image{
           height:200px ;
-          width: 400px;
           position: relative;
           margin: auto;
           @include flex;
@@ -79,10 +72,11 @@
         }
         &--stock{
           font-size: 15px;
+          margin-bottom: 5px;
         }
         &--destroy{
           position: absolute;
-          left: 320px;
+          left: 10px;
           top: 0;
           font-size: 30px;
           height: 60px;
@@ -102,12 +96,14 @@
   }
 }
 .content__btns{
-  height: 120px;
   @include flex-between;
-  padding: 10px 165px;
+  width: 80%;
+  margin: 30px auto;
+  & a{
+    width: 30%;
+  }
   .content__btn{
     height: 100px;
-    width: 400px;
     background-color: $blue;
     text-align: center;
     line-height: 100px;
@@ -129,14 +125,11 @@
   text-align: center;
 }
 .search__box{
-  height: 500px;
  margin: 40px 100px;
  box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
  padding: 30px 30px;
- position: relative;
  background-color: #eeeeee;
  &--contens{
-   height: 100px;
    text-align: center;
    &:hover{
      opacity: 0.7;
@@ -159,9 +152,6 @@
   @include flex;
   overflow: scroll;
   width: calc(100% - 60px);
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
   .search__box--mask{
     width: 33%;
     margin-right: 40px;
@@ -176,6 +166,9 @@
       height: 200px;
       display: inline-flex;
       padding-top: 20px;
+      & img{
+        width: 100%;
+      }
     }
     &-name{
       font-size: 20px;
@@ -195,7 +188,6 @@
 }
 .search-form{
   text-align: center;
-  height: 100px;
   .search-input{
     height: 60px;
     margin-left: 20px;
@@ -229,3 +221,84 @@
     }
   }
 }
+
+// mobilecss
+@media screen and (max-width: 480px){ 
+  .shop__box{
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    &--image{
+      margin: 0;
+      width: 100%;
+      & img{
+       height: 100%;
+       width: 100%;
+      }
+    }
+  }
+ .shop__box--masks{
+   width: 95%;
+   display: block;
+   padding: 5px 0;
+   & .mask-box{
+     width: calc(100% - 40px);
+     &--stock{
+       padding-bottom: 5px;
+     }
+     &--image{
+       width: 100%;
+     }
+     &--destroy{
+       left: 10px;
+     }
+   }
+ }
+
+  .content__btns{
+    width: 95%;
+    display: block;
+    padding: 0 ;
+    & .content__btn{
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  // search
+  .search-form{
+    margin: 0 10px;
+    & .search-input{
+      margin: 0 0 20px 0;
+      width: 100%;
+      padding-left: 5px;
+    }
+    & .search-btn{
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+  }
+  .search__box{
+    margin: 20px 10px !important;
+    padding: 15px !important;
+    & .search__name{
+      font-size: 23px !important;
+      text-shadow: 1px 1px 0px $black;
+   }
+   &--masks{
+     width: 100% !important;
+     scroll-snap-type: x mandatory;
+     white-space: nowrap;
+     overflow: auto;
+     display: block !important;
+   }
+   &--mask{
+     width: 100% !important;
+     margin: 0  !important;
+     scroll-snap-align: center;
+    display: inline-block;
+    white-space: normal;
+   }
+    }
+  }

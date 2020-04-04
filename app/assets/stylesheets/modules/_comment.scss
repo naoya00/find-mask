@@ -17,8 +17,11 @@
     margin: 0 200px;
     padding: 20px 50px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+    & input{
+      border: solid 1px $blue;
+      width: 100%;
+    }
     &--box{
-      @include flex-between;
       width: 100%;
       &-field{
         margin-bottom: 40px;
@@ -32,7 +35,6 @@
         height: 40px;
       }
       #comment_text{
-      width: 900px;
       margin-top: 10px;
       padding-left: 10px;
       height: 40px;
@@ -45,10 +47,40 @@
       margin-bottom: 15px;
       color: $white;
       border-radius: 20px;
+      cursor: pointer;
     }
   }
 }
 }
 .commentPaginate {
   display: none;
+}
+
+@media screen and (max-width: 480px){ 
+  .comments{
+    margin: 0 10px;
+    &__form{
+      margin: 0 ;
+      padding: 10px 20px;
+      &--box{
+        display: block;
+        &-field{
+          margin-bottom: 10px;
+        }
+        &-submit{
+          margin-top: 20px;
+        }
+      }
+      #comment_nickname{
+        width: 100%;
+      }
+      #comment_text{
+        width: 100%;
+      }
+     }
+  }
+   .comments__box{
+     padding: 20px;
+     box-shadow: 0 0 9px 0px $blue;
+   }
 }

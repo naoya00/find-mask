@@ -224,7 +224,6 @@ header{
     }
   }
   &__box{
-    margin: 100px 0;
     padding: 0 200px;
     text-align: center;
     .fa-arrow-circle-up{
@@ -281,6 +280,7 @@ header{
       box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
       border-radius: 20px;
       color:$white;
+      cursor: pointer;
     }
   }
 }
@@ -294,6 +294,14 @@ footer {
 .space{
   margin: 0 10px;
 }
+// #小さいPc用
+@media screen and (max-width: 1582px) {
+  .servise{
+    padding: 90px 80px;
+
+  } 
+}
+
 
 // パソコン用
 @media screen and (min-width: 481px) {
@@ -338,7 +346,7 @@ footer {
   height: 100vh;
  &__logo{
   @include moveanimation_mobile();
-  padding: 20px;
+  padding: 10px;
  }
  &__right{
   left: 15%;
@@ -351,6 +359,7 @@ footer {
 }
 .servise{
   padding: 90px 0 0 0;
+  margin: 0 10px;
   &__images{
     display: block;
     &--left{
@@ -371,10 +380,13 @@ footer {
     }
   }
 }
-.secondservise__images{
-  width: 100%;
-  &--box{
-    width: auto;
+.secondservise {
+  margin: 50px 10px;
+  &__images{
+    width: 100%;
+    &--box{
+      width: auto;
+    }
   }
 }
 .posts__box{
@@ -386,5 +398,9 @@ footer {
 .newpost__box--name{
     font-size: 18px !important;
     margin-right: 0 !important;
+}
+.postform__box{
+  padding: 10px 20px;
+  width: 95%;
 }
 }
