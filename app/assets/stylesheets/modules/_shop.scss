@@ -1,5 +1,4 @@
 .shop{
-  height: 1100px;
   &__en{
     padding-top: 50px;
     @include heading-english;
@@ -9,9 +8,7 @@
   }
   &__box{
     @include mainbox;
-    height: 850px;
     @include flex-between;
-    position: relative;
     &--image{
       height: 240px;
       width: 400px;
@@ -31,7 +28,6 @@
       padding:20px 30px;
       color: $black;
       .shop__content{
-        height: 60px;
         width: 100%;
         margin-top:10px;
         line-height: 60px;
@@ -42,23 +38,21 @@
       }
     }
     &--masks{
-      height: 280px;
-      width: calc(100% - 100px);
-      position: absolute;
-      bottom: 30px;
+      margin: 20px 168px 0;
+      box-shadow: 0 0 8px $black;
+     background-color: #EEEEEE;
       @include flex;
       overflow: scroll;
       .mask-box{
         height: 100%;
         width: 33%;
-        margin-right: 20px;
+        margin: 20px;
         box-shadow: inset 0 0 8px 0px black;
         background-color: white;
         padding-top: 10px;
         border-radius: 40px;
         &--image{
           height:200px ;
-          width: 400px;
           position: relative;
           margin: auto;
           @include flex;
@@ -79,10 +73,11 @@
         }
         &--stock{
           font-size: 15px;
+          margin-bottom: 5px;
         }
         &--destroy{
           position: absolute;
-          left: 320px;
+          left: 10px;
           top: 0;
           font-size: 30px;
           height: 60px;
@@ -102,9 +97,8 @@
   }
 }
 .content__btns{
-  height: 120px;
   @include flex-between;
-  padding: 10px 165px;
+  padding: 40px 165px;
   .content__btn{
     height: 100px;
     width: 400px;
@@ -226,6 +220,50 @@
     }
     & a{
       color: $blue;
+    }
+  }
+}
+
+// mobilecss
+@media screen and (max-width: 480px){ 
+  .shop__box{
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    &--image{
+      margin: 0;
+      width: 100%;
+      & img{
+       height: 100%;
+       width: 100%;
+      }
+    }
+  }
+ .shop__box--masks{
+   margin: 20px 10px;
+   display: block;
+   & .mask-box{
+     width: calc(100% - 40px);
+     &--stock{
+       padding-bottom: 5px;
+     }
+     &--image{
+       width: 100%;
+     }
+     &--destroy{
+       left: 10px;
+     }
+   }
+ }
+
+  .content__btns{
+    display: block;
+    padding: 0 ;
+    margin: 40px 10px;
+    & .content__btn{
+      width: 100%;
+      margin-bottom: 15px;
     }
   }
 }
