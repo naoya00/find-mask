@@ -294,6 +294,13 @@ footer {
 .space{
   margin: 0 10px;
 }
+// #小さいPc用
+@media screen and (max-width: 1582px) {
+  .servise{
+    padding: 90px 80px;
+  } 
+}
+
 
 // パソコン用
 @media screen and (min-width: 481px) {
