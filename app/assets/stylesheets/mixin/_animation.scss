@@ -50,11 +50,13 @@
   @keyframes movecontent {
     0% {
       top: 0;
-      left: 20%;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
     100% {
       top: 30%;
-      left: 20%;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
   }
 }

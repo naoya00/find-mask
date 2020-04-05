@@ -347,13 +347,20 @@ footer {
  &__logo{
   @include moveanimation_mobile();
   padding: 10px;
+  font-size: 8vmin !important;
  }
  &__right{
-  left: 15%;
   bottom: 15px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  & h1{
+    font-size: 6vmin !important;
+  }
   &--btn{
     margin-top: 20px;
-    padding: 15px 60px;
+    padding: 10px 20px;
+    font-size: 3.5vmin !important;
+    text-align: center;
   }
  }
 }
