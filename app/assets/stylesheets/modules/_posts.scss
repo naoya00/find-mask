@@ -346,7 +346,10 @@ footer {
   height: 100vh;
  &__logo{
   @include moveanimation_mobile();
-  padding: 10px;
+  animation: logo_mobile 5s, movecontent_mobile 5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  padding: 10px 20px; 
   font-size: 8vmin !important;
  }
  &__right{
