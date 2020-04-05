@@ -1,33 +1,4 @@
-<!-- ### アプリの概要
-
-# 人類を救う、マスク在庫検索アプリ【Find Mask】
-
-
-### アプリの機能一覧
-
-##### SHOP(会員登録有り)
-・マスク在庫追加機能(jqueriを用いた画像プレビュー表示機能)<br>
-・マスク在庫消去機能<br>
-・新着在庫情報投稿機能<br>
-・マイページ編集機能<br>
-・ポートフォリオを見て頂くためにご用意させていただきましたゲストログイン機能<br>
-##### USER(会員登録無し)
-・マスク在庫検索機能（ajax通信を用いたインクリメンタルサーチ）<br>
-・SHOP一覧表示機能(ページネーション機能)<br>
-・マスク情報掲示板投稿機能(ajax通信を用いた非同期投稿機能、jscrollを用いた無限スクロール機能)<br>
-
-### 使用技術(開発環境)
-・Ruby on Rails<br>
-・Haml<br>
-・scss<br>
-・javascript<br>
-・jqueri<br>
-・Mysql<br>
-・AWS<br>
-・VScode<br>
- -->
-
- # Go-reserve
+# Go-reserve
 Application for managing goverment office procedures
 <p align=“center”>
 <img src=“https://user-images.githubusercontent.com/61037834/77864615-9b898b00-7264-11ea-96b7-299ae5301417.jpg” width=70%>
@@ -64,3 +35,4 @@ GoReserve is management application for advance reservation for goverment office
 - [Github](https://github.com/golazooo23/go-reserve)
 - [Twitter](https://twitter.com/go_glzgo)
 - [Qiita](https://qiita.com/go_glzgo)
+
