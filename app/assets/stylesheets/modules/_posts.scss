@@ -256,8 +256,7 @@ header{
   } 
 }
 .postform{
-  height: 450px;
-  display: inline;
+  margin-bottom: 200px;
   &__ja{
   @include heading-japan;
   }
