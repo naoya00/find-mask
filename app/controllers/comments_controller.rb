@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
-    @comments = Comment.all.order(updated_at: :desc).page(params[:page]).per(5)
+    @comments = Comment.order(created_at: "DESC").all.page(params[:page]).per(7)
     @comment = Comment.new
   end
 
@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
         format.json
       end
     else
-      @comments = Comment.all.order(updated_at: :desc).page(params[:page]).per(5)
+      @comments = Comment.all.order(updated_at: :desc).page(params[:page]).per(7)
       flash.now[:alert] = '空の値があります'
       render :index
     end
