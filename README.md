@@ -46,7 +46,7 @@
 ・jqueri(インクリメンタルサーチ、メッセージの非同期化、画像のプレビュー表示、ドロップダウンメニュー、無限スクロール）<br>
 ・JSライブラリ（slick.js、pace.js、jscroll.js)<br>
 ・レスポンシブデザイン（メディアクエリ）<br>
-・Webフォント<br>
+・Webフォント（Google fonts)<br>
 ・アイコンフォント（font-awesome)<br>
 ・CSSアニメーション<br>
 #### サーバー
