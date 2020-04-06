@@ -9,7 +9,7 @@ class MasksController < ApplicationController
     if @mask.save
       render :create
     else
-      redirect_to new_shop_mask_path(@mask.shop.id), notice: 'マスク名、在庫数は空では登録できません。'
+      redirect_to new_shop_mask_path(@mask.shop.id), notice: '全ての項目を入力してください。'
     end
   end
 
