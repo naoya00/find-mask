@@ -43,6 +43,7 @@
      background-color: #EEEEEE;
       @include flex;
       flex-wrap: wrap;
+      justify-content: center;
       .mask-box{
         height: 100%;
         margin: 20px;
