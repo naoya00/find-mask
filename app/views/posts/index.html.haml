@@ -45,7 +45,7 @@
       クリックするとお店の詳細ページにいけます
   .posts__box#postslick
     - @posts.each do |post|
-      = link_to shop_path(post.shop.id) do
+      = link_to shop_path(post.shop.id),class:"newShop__hover" do
         .newpost__box
           %span.newpost__box--date
             = post.created_at

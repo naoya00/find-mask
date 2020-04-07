@@ -24,6 +24,9 @@ header{
    font-size: 30px;
    color: $blue;
    font-family: Roboto;
+   &:hover{
+     opacity: 0.8;
+   }
   }
   .header__lists{
     @include flex();
@@ -227,12 +230,16 @@ header{
     padding: 0 200px;
     text-align: center;
     .fa-arrow-circle-up{
-      font-size: 30px;
+      font-size: 35px;
       cursor: pointer;
+      border-radius: 50%;
+      @include shadow_btn;
     }
     .fa-arrow-circle-down{
-      font-size: 30px;
+      font-size: 35px;
       cursor: pointer;
+      border-radius: 50%;
+      @include shadow_btn;
     }
   } 
 }
