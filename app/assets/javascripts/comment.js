@@ -28,7 +28,7 @@ document.addEventListener("turbolinks:load", function() {
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.posts__box').prepend(html);
+      $('.comments__form').after(html);
       $('.textbox').val('');
       $('.nicknamebox').val('');
       $('.comments__form--box-submit').prop('disabled', false);

@@ -234,26 +234,45 @@ header{
       font-size: 30px;
       cursor: pointer;
     }
-    .newpost__box{
-      margin: 50px 0;
-      text-align: center;
-      width: 100%;
-      color: $black;
-      &--date{
-        color: $blue;
-        margin-right: 10px;
-        font-weight: bold;
-      }
-      &--name{
-        font-size: 25px;
-        font-weight: bold;
-        margin-right: 100px;
-      }
-      &--content{
-        margin-top: 20px;
-      }
-    }
+    // .newpost__box{
+    //   margin: 50px 0;
+    //   text-align: center;
+    //   width: 100%;
+    //   color: $black;
+    //   &--date{
+    //     color: $blue;
+    //     margin-right: 10px;
+    //     font-weight: bold;
+    //   }
+    //   &--name{
+    //     font-size: 25px;
+    //     font-weight: bold;
+    //     margin-right: 100px;
+    //   }
+    //   &--content{
+    //     margin-top: 20px;
+    //   }
+    // }
   } 
+}
+.newpost__box{
+  margin: 50px 0 !important;
+  text-align: center;
+  width: 100%;
+  color: $black;
+  &--date{
+    color: $blue;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  &--name{
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 100px;
+  }
+  &--content{
+    margin-top: 20px;
+  }
 }
 .postform{
   margin-bottom: 200px;
