@@ -8,7 +8,6 @@ document.addEventListener("turbolinks:load", function() {
     }, speed, 'swing');
     return false;
   });
-
   $('.topcontens__right--btn').click(function() {
     var speed = 400; 
     var target = $(".servise");
@@ -18,7 +17,6 @@ document.addEventListener("turbolinks:load", function() {
     }, speed, 'swing');
     return false;
   });
-
   $('#postslick').slick({
   autoplay: true, 
   vertical: true, 
@@ -28,7 +26,6 @@ document.addEventListener("turbolinks:load", function() {
   prevArrow:'<i class="fas fa-arrow-circle-up"></i>',
   nextArrow:'<i class="fas fa-arrow-circle-down"></i>'
   });
-
   $('.dropdwn li').hover(function(){
     $("ul:not(:animated)", this).slideDown();
   }, function(){
