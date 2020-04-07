@@ -89,7 +89,7 @@ header{
   margin-top: 75px;
   background-position: center;
   &__logo{
-    color: white;
+    color: $white;
     font-size: 40px;
     padding: 20px 80px;
     opacity: 0;
@@ -99,7 +99,7 @@ header{
     position: absolute;
     font-family: Roboto;
     box-shadow: inset 0 0 20px 5px ;
-    border: white solid 1px;
+    border: $white solid 1px;
     text-shadow: 8px 6px 7px rgba(0, 0, 0, 0.4);
    }
   &__right{
@@ -121,8 +121,8 @@ header{
       font-family: Sawarabi Mincho;
     }
     &--btn{
-      border: solid 1px white;
-      color: white;
+      border: solid 1px $white;
+      color: $white;
       padding: 15px 80px;
       text-decoration: none;
       margin-top: 80px;
@@ -313,8 +313,6 @@ footer {
 
   } 
 }
-
-
 // パソコン用
 @media screen and (min-width: 481px) {
   .menu__btn{
@@ -331,7 +329,6 @@ footer {
    }
  }
 }
-
 // スマホ用
 @media screen and (max-width: 480px){ 
  header{
