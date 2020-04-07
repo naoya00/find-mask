@@ -58,6 +58,7 @@
 #### サーバー
 ・Ruby on Rails(devise,carrierwave,mini_magick,kaminari)<br>
 ・rspec、factory_botを用いたテスト<br>
+・Mysql<br>
 #### インフラ
 ・AWS（Capistranoによる自動デプロイ化）<br>
 ・S3<br>
