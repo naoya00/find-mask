@@ -38,15 +38,15 @@ document.addEventListener("turbolinks:load", function() {
       $('.comments__form--box-submit').prop('disabled', false);
     })
   })
-});
-$(window).on('scroll', function() {
-  scrollHeight = $(document).height();
-  scrollPosition = $(window).height() + $(window).scrollTop();
-  if ( (scrollHeight - scrollPosition) / scrollHeight <= 0.05) {
-    $('.comments--underbox').jscroll({
-      contentSelector: '.comments--underbox',
-      nextSelector: 'span.next:last a',
-      loadingHtml: '読み込み中'
-    });
-  }
+  $(window).on('scroll', function() {
+    scrollHeight = $(document).height();
+    scrollPosition = $(window).height() + $(window).scrollTop();
+    if ( (scrollHeight - scrollPosition) / scrollHeight <= 0.05) {
+      $('.comments--underbox').jscroll({
+        contentSelector: '.comments--underbox',
+        nextSelector: 'span.next:last a',
+        loadingHtml: '読み込み中'
+      });
+    }
+  });
 });
