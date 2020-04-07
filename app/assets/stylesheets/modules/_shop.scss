@@ -208,10 +208,10 @@
     height: 60px;
     background-color: $blue;
     color: $white;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
     width: 120px;
     margin-left: 20px;
     cursor: pointer;
+    @include shadow_btn;
   }
 }
 .editcontainer{

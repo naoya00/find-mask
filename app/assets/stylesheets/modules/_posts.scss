@@ -24,6 +24,9 @@ header{
    font-size: 30px;
    color: $blue;
    font-family: Roboto;
+   &:hover{
+     opacity: 0.8;
+   }
   }
   .header__lists{
     @include flex();
@@ -227,32 +230,17 @@ header{
     padding: 0 200px;
     text-align: center;
     .fa-arrow-circle-up{
-      font-size: 30px;
+      font-size: 35px;
       cursor: pointer;
+      border-radius: 50%;
+      @include shadow_btn;
     }
     .fa-arrow-circle-down{
-      font-size: 30px;
+      font-size: 35px;
       cursor: pointer;
+      border-radius: 50%;
+      @include shadow_btn;
     }
-    // .newpost__box{
-    //   margin: 50px 0;
-    //   text-align: center;
-    //   width: 100%;
-    //   color: $black;
-    //   &--date{
-    //     color: $blue;
-    //     margin-right: 10px;
-    //     font-weight: bold;
-    //   }
-    //   &--name{
-    //     font-size: 25px;
-    //     font-weight: bold;
-    //     margin-right: 100px;
-    //   }
-    //   &--content{
-    //     margin-top: 20px;
-    //   }
-    // }
   } 
 }
 .newpost__box{
@@ -272,6 +260,11 @@ header{
   }
   &--content{
     margin-top: 20px;
+  }
+}
+.newShop__hover{
+  &:hover{
+    opacity: 0.7;
   }
 }
 .postform{
@@ -296,7 +289,7 @@ header{
       margin: 10px 0;
       height: 40px;
       background-color: $blue;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 1);
+      @include shadow_btn;
       border-radius: 20px;
       color:$white;
       cursor: pointer;
