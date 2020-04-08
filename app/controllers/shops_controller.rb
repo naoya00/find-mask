@@ -9,8 +9,7 @@ class ShopsController < ApplicationController
     @masks = @shop.masks.includes(:shop).order(updated_at: :desc)
   end
 
-  def edit
-  end
+  def edit;end
 
   def update
     @shop.update(shop_params)
