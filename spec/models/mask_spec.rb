@@ -15,7 +15,7 @@ describe Mask do
       end
 
     it "マスク画像が空の場合は登録できないこと" do
-      mask = build(:image,stock: "")
+      mask = build(:mask,image: "")
       mask.valid?
       expect(mask.errors[:image]).to include("を入力してください")
       end
