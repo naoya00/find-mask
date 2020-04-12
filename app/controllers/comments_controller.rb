@@ -17,6 +17,7 @@ class CommentsController < ApplicationController
       flash.now[:alert] = '空の値があります'
       render :index
     end
+    
   end
 
   private
