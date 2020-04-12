@@ -1,4 +1,5 @@
 class HomesController < ApplicationController
+
   def new_guest
     shop = Shop.find_or_create_by!(email: 'guest@example.com') do |shop|
       shop.password = SecureRandom.urlsafe_base64
@@ -12,4 +13,5 @@ class HomesController < ApplicationController
     sign_in shop
     redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
   end
+
 end
